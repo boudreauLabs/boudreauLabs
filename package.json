@@ -8,8 +8,10 @@
     "11ty": "npx @11ty/eleventy --watch",
     "11ty:prod": "set ELEVENTY_PROD=1&npx @11ty/eleventy",
     "clean": "gulp clean",
-    "watch": "npm-run-all clean --parallel gulp 11ty",
-    "build": "npm-run-all clean --parallel gulp:prod 11ty:prod"
+    "sass": "sass --watch src/assets/scss:build/assets/css",
+    "sass:prod": "sass --style=compressed src/assets/scss:build/assets/css",
+    "watch": "npm-run-all clean --parallel gulp 11ty sass",
+    "build": "npm-run-all clean --parallel gulp:prod 11ty:prod sass:prod"
   },
   "author": "",
   "license": "UNLICENSED",

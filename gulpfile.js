@@ -99,12 +99,13 @@ function bsReload(done) {
 }
 
 function watchFiles() {
-  watch(paths.styles.watch, parallel(scssStyles));
+  // watch(paths.styles.watch, parallel(scssStyles));
   watch(paths.scripts.watch, themeScript);
 };
 
 // Defining complex tasks
-const buildSite = gulp.series(copyAssets, themeScript, vendorScript, scssStyles);
+// const buildSite = gulp.series(copyAssets, themeScript, vendorScript, scssStyles);
+const buildSite = gulp.series(copyAssets, themeScript, vendorScript);
 const watchProject = gulp.series(buildSite, gulp.parallel(watchFiles, browserSync));
 
 
