@@ -1,0 +1,242 @@
+// =======
+// Options
+// =======
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret:                true;
+$enable-rounded:              false;
+$enable-shadows:              false;
+$enable-gradients:            false;
+$enable-transitions:          true;
+$enable-reduced-motion:       true;
+$enable-smooth-scroll:        true;
+$enable-grid-classes:         true;
+$enable-container-classes:    true;
+$enable-cssgrid:              false;
+$enable-button-pointers:      true;
+$enable-rfs:                  true;
+$enable-validation-icons:     true;
+$enable-negative-margins:     false;
+$enable-deprecation-messages: true;
+$enable-important-utilities:  true;
+
+$enable-dark-mode:            false;
+$color-mode-type:             data; // `data` or `media-query`
+
+$prefix:                      bdl-;
+
+// ============
+// Color system
+// ============
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+
+$primary:       $cyan;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark".
+// Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio:   4.5;
+
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark:      $black;
+$color-contrast-light:     $white;
+
+
+// ====
+// Body
+// ====
+$body-text-align:           null;
+$body-color:                $gray-900;
+$body-bg:                   $white;
+
+$body-secondary-color:      rgba($body-color, .75);
+$body-secondary-bg:         $gray-200;
+
+$body-tertiary-color:       rgba($body-color, .5);
+$body-tertiary-bg:          $gray-100;
+
+$body-emphasis-color:       $black;
+
+
+// =====
+// Links
+// =====
+$link-color:                              $primary;
+$link-decoration:                         underline;
+$link-shade-percentage:                   20%;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage);
+$link-hover-decoration:                   null;
+
+
+// =======
+// Spacing
+// =======
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// ================
+// Grid Components
+// ================
+// Grid breakpoints
+$grid-breakpoints:      (
+                          xs: 0,
+                          sm: 576px,
+                          md: 768px,
+                          lg: 992px,
+                          xl: 1200px,
+                          xxl: 1440px,
+                          xxxl: 1660px
+                        );
+
+// Grid containers
+$container-max-widths:  (
+                          sm: 540px,
+                          md: 720px,
+                          lg: 960px,
+                          xl: 1140px,
+                          xxl: 1400px,
+                          xxxl: 1600px
+                        );
+
+// Grid columns
+$grid-columns:          12;
+$grid-gutter-width:     1.5rem;
+$grid-row-columns:      6;
+
+// Container padding
+$container-padding-x: $grid-gutter-width*2;
+
+
+// ==========
+// Typography
+// ==========
+// RFS Engine - Resposive type scale
+// RFS scales the heading font sizes down from the defined values as the
+// viewport narrows lower than the defined $rfs-breakpoint value
+// https://github.com/twbs/rfs/tree/v9.0.6#visualisation
+$rfs-base-value:              1.25rem;  // Fonts smaller than this size are not effected by the scale. Default: 1.125rem
+$rfs-breakpoint:              1200px;   // Viewport widths smaller than this value are effected by the scale. Defaulty: 1200px
+$rfs-factor:                  10;       // Lower the number = less effect. Default is 10.
+
+
+$font-family-sans-serif:      'Poppins', sans-serif;
+
+$font-size-root:              null;
+$font-size-base:              1.125rem; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875;
+$font-size-lg:                $font-size-base * 1.25;
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-medium:          500;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$font-weight-base:            $font-weight-normal;
+
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+$line-height-lg:              2;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$headings-margin-bottom:      $spacer * .5;
+$headings-font-family:        null;
+$headings-font-style:         null;
+$headings-font-weight:        $font-weight-normal;
+$headings-line-height:        1.2;
+$headings-color:              inherit;
+
+
+// scss-docs-start display-headings
+$display-font-sizes:          (
+                                1: 7rem,
+                                2: 5.5rem,
+                                3: 3rem,
+                                4: 2rem,
+                                5: 1.75rem,
+                                6: 1.5rem
+                              );
+
+$display-font-family:         'Anton', sans-serif;
+$display-font-style:          null;
+$display-font-weight:         $font-weight-normal;
+$display-line-height:         1;
+
+$lead-font-size:              $font-size-base * 1.25;
+$lead-font-weight:            300;
+
+$small-font-size:             .875em;
+
+
+
+// ===========================
+// Main Page Header
+// ===========================
+$header-padding-bottom-mobile:        2.5rem;
+$header-padding-bottom-desktop:       3.5rem;
+$header-padding-top-mobile:           6rem;
+$header-padding-top-desktop:          8.5rem;
+
+// ===============================
+// Header/Section Background Image
+// ===============================
+$section-bgimg-sm:                    null;
+$section-bgimg-lg:                    null;
+
+// ===============================
+// Header/Section Background Image
+// ===============================
+$section-overlay-opacity:             0.25;

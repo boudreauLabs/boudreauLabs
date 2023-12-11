@@ -1,0 +1,111 @@
+.bg-filter {
+  // backdrop-filter: sepia(45%) blur(2rem);
+}
+
+.bg-radial {
+  background: radial-gradient(circle at 30% 50%, rgba(228,220,206,1) 20%, rgba(189,172,150,1) 90%);
+}
+
+
+
+
+@property --ax{ syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+@property --ay{ syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+@property --bx{ syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+@property --by{ syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+@property --cx{ syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+@property --cy{ syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+
+.gradient-container {
+  --ax: 50%;
+  --ay: 0%;
+  --bx: 3.7%;
+  --by: 75%;
+  --cx: 93.3%;
+  --cy: 75%;
+
+  animation-name: bgAnimate;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+
+  background: radial-gradient(
+    circle at var(--ax) var(--ay),
+    rgba(218, 253, 186, 0.75),
+    rgba(218, 253, 186, 0.125) 70.71%
+  ),
+  radial-gradient(
+    circle at var(--bx) var(--by),
+    rgba(174, 0, 255, 0.5),
+    rgba(174, 0, 255, 0.125) 70.71%
+  ),
+  radial-gradient(
+    circle at var(--cx) var(--cy),
+      rgba(0, 255, 0, 0.5),
+      rgba(0, 255, 0, 0.125) 70.71%
+    );
+}
+
+@keyframes bgAnimate {
+  0% {
+    --ax: 10%;
+    --ay: -20%;
+    --bx: 3.7%;
+    --by: 75%;
+    --cx: 93.3%;
+    --cy: 75%;
+  }
+  50% {
+    --ax: 10%;
+    --ay: 20%;
+    --bx: 3.7%;
+    --by: 75%;
+    --cx: 93.3%;
+    --cy: 75%;
+  }
+  100% {
+    --ax: 10%;
+    --ay: -20%;
+    --bx: 3.7%;
+    --by: 75%;
+    --cx: 93.3%;
+    --cy: 75%;
+  }
+}
+
+
+
+
+// .gradient-container {
+//   --x:0%;
+//   --y:30%;
+//   // --deg: 0;
+
+//   animation-name: example;
+//   animation-duration: 4s;
+//   animation-iteration-count: infinite;
+//   background:conic-gradient(from 0deg at var(--x) var(--y), #ff0000 10%, gold 30%, #ff0000 50%);
+//   transition: --deg 0.2s;
+// }
+
+// @keyframes example {
+//   0% {
+//     --x:0%;
+//     --y:30%;
+//     // --deg: 0;
+//     background:conic-gradient(from 0deg at var(--x) var(--y), #ff0000 10%, gold 30%, #ff0000 50%);
+//   }
+//   50% {
+//     --x:0%;
+//     --y:60%;
+//     // --deg: 30;
+//     background:conic-gradient(from 10deg at var(--x) var(--y), #ff0000 10%, gold 30%, #ff0000 50%);
+//   }
+//   100% {
+//     --x:0%;
+//     --y:30%;
+//     // --deg: 0;
+//     background:conic-gradient(from 0deg at var(--x) var(--y), #ff0000 10%, gold 30%, #ff0000 50%);
+//   }
+// }
+
+

@@ -1,0 +1,27 @@
+---
+layout: default
+
+pageTitle: Boudreau Labs
+
+bodyClass: null
+
+blTempHead:
+  colorTheme: dark
+  minHeight: 100
+  cntJustify: center
+  cntAlign: center
+  cntTextAlign: center
+  fluidContainer: false
+  bgImage:
+    bgImageSm: url('../images/bg-img/bg-img-04-sm.jpg')
+    bgImageLg: url('../images/bg-img/bg-img-04.jpg')
+    bgPos: cc
+
+---
+{{#>header blTempHead}}
+  {{!-- {{#*inline "nav-content"}}
+  {{/inline}} --}}
+  {{#*inline "header-content"}}
+  <img src="{{root}}/assets/images/bl-logo.png" alt="Boudreau Labs" class="img-logo">
+  {{/inline}}
+{{/header}}

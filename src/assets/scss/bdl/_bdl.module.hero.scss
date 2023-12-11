@@ -1,0 +1,135 @@
+.hro {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  & > .hro-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    position: relative;
+    z-index: 3;
+
+    & > .row {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+// Header hero variant
+header.hro {
+  & > .hro-content > .row {
+    padding-bottom: $header-padding-bottom-mobile;
+    padding-top: $header-padding-top-mobile;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: $header-padding-bottom-desktop;
+      padding-top: $header-padding-top-desktop;
+    }
+  }
+}
+
+// Header hero variant
+// section.hro {
+//   & > .hro-content > .row {
+//     padding-bottom: $section-padding-bottom-mobile;
+//     padding-top: $section-padding-top-mobile;
+
+//     @include media-breakpoint-up(lg) {
+//       padding-bottom: $section-padding-bottom-desktop;
+//       padding-top: $section-padding-top-desktop;
+//     }
+//   }
+// }
+
+// Background image support
+.hro-img {
+  --#{$prefix}bgimg-sm: #{$section-bgimg-sm};
+  --#{$prefix}bgimg-lg: #{$section-bgimg-lg};
+
+  background-image: var(--#{$prefix}bgimg-sm);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-breakpoint-up(lg) {
+    background-image:  var(--#{$prefix}bgimg-lg);
+  }
+}
+
+// Background video support
+.hro-vid {
+  & > .video-wrapper {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .hro-video {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center center;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+  .hro-video-embed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+
+    @media (min-aspect-ratio: 16/9) {
+      height: 56.25vw
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+      width: 177.78vh
+    }
+  }
+}
+
+// Overlay controls
+.hro-img,
+.hro-vid {
+  & > .overlay {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .4s ease-in-out;
+    width: 100%;
+    z-index: 2;
+  }
+  &.text-bg-light > .overlay {
+    background: rgba(var(--#{$prefix}white-rgb), $section-overlay-opacity);
+  }
+  &.text-bg-dark > .overlay {
+    background: rgba(var(--#{$prefix}black-rgb), $section-overlay-opacity);
+  }
+  &.text-bg-primary > .overlay {
+    background: rgba(var(--#{$prefix}primary), $section-overlay-opacity);
+  }
+  &.text-bg-secondary > .overlay {
+    background: rgba(var(--#{$prefix}secondary), $section-overlay-opacity);
+  }
+  // @each $state, $value in $accent-colors {
+  //   $color-rgb: to-rgb($value);
+  //   &.text-bg-#{$state} > .overlay {
+  //     background: RGBA(#{$color-rgb}, #{$section-overlay-opacity});
+  //   }
+  // }
+}

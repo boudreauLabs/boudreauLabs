@@ -1,0 +1,19 @@
+{{!--
+
+    Data Tag Usage:
+    ===============
+    tag: [string] - Default 'a' Options: 'a' or 'button'
+    type: [string] - type of button
+    btnUrl: [string] - Link URL
+    modifier: [string] - Button class name
+    disabled: [Boolean] - Disable button
+    attr: [array] - Optional: list of data attributes
+      - attrName: [string] data-name of attribute
+        attrVal: [string] attribute value
+    text: [string] (Optional) - Text for button
+    icon: [object] (Optional) - include icon
+      icon-class: [string] - Icon class name
+      icon-modifier: [string] - Optional: additional size class modifiers for icons
+
+ --}}
+<{{#if tag}}{{tag}}{{else}}a{{/if}}{{#if type}} type="{{type}}"{{/if}}{{#if btnUrl}} href="{{btnUrl}}"{{/if}}{{#each attr}} data-{{attrName}}="{{attrVal}}"{{/each}} class="btn {{modifier}}{{#if disabled}} disabled{{/if}}"{{#if disabled}} aria-disabled="true"{{/if}}>{{#if icon}}{{>icon icon}} {{/if}}{{#if text}}{{text}}{{else}}Button{{/if}}</{{#if tag}}{{tag}}{{else}}a{{/if}}>

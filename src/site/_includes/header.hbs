@@ -1,0 +1,89 @@
+{{!--
+
+  Data Tag Usage:
+  ===============
+  colorTheme: [string] - Optional: Sets text theme for header. Values: light, dark, accent1, accent2
+  minHeight: [number] - Optional: Add minimum height for section. Based on viewport height. Values: 50, 65, 75, 90, 100
+  cntJustify: [string] - Optional: horizontal alignment of content area. Values: start, center, end
+  cntAlign: [string] - Optional: vertical alignment of content area. Values: start, center, end
+  cntTextAlign: [string] - Optional: Text alignment in content area. Values: start, center, end
+  fluidContainer: [boolean] = Optional - Fluid contrainers. False by default
+  bgImage: [object] - Optional - Adds background image to hero section
+    bgImageSm: [string] - Background image source for small viewports. Example: url('../PATH/TO/IMAGE/IMAGENAME.jpg')
+    bgImageLg: [string] - Background image source for large viewports. Example: url('../PATH/TO/IMAGE/IMAGENAME.jpg')
+    bgPos: [string] - Background position for header image. Values: cc, lc, rc, bc, bl, br, tc, tl, tr
+  bgVideo: [object] - Optional: Adds background video to header
+    embedYt: [string] - Embeds YouTube video as header background. Values: YouTube Video ID
+    embedVim: [string] - Embeds Vimeo video as header background. Values: Vimeo Video ID
+    video: [string] - Embeds a hosted video as header background. Values: Video file name
+
+  Example:
+  --------
+  {{#>header componentData}}
+    {{#*inline "nav-content"}}
+    {{/inline}}
+    {{#*inline "header-content"}}
+    {{/inline}}
+  {{/header}}
+
+--}}
+<header class="hro{{#if bgImage}} hro-img{{/if}}{{#if bgVideo}} hro-vid{{/if}}{{#if colorTheme}} text-bg-{{colorTheme}}{{/if}}{{#if minHeight}} min-vh-{{minHeight}}{{/if}}{{#if bgImage.bgPos}} bg-pos-{{bgImage.bgPos}}{{/if}}"{{#if bgImage}} style="{{#if bgImage.bgImageSm}}--bdl-bgimg-sm: {{{bgImage.bgImageSm}}}; {{/if}}{{#if bgImage.bgImageLg}}--bdl-bgimg-lg: {{{bgImage.bgImageLg}}};{{/if}}"{{/if}}>
+  {{!-- {{>skiplinks}} --}}
+
+  {{#>nav-content}}
+  {{/nav-content}}
+
+  <div class="container{{#if fluidContainer}}-fluid{{/if}} hro-content">
+    <div class="row{{#if cntJustify}} justify-content-{{cntJustify}}{{/if}}{{#if cntAlign}} align-items-{{cntAlign}}{{/if}}">
+      <div class="col{{#if cntTextAlign}} text-{{cntTextAlign}}{{/if}}">
+        <!-- BEGIN: Header Content -->
+        {{#>header-content}}
+        {{/header-content}}
+        <!-- END: Header Content -->
+      </div>
+    </div>
+    {{!-- Breadcrumb Area --}}
+    {{#>breadcrumb-content}}
+    {{/breadcrumb-content}}
+  </div>
+  {{#or bgVideo bgImage}}
+
+  <div class="overlay"></div>
+  {{/or}}
+  {{#if bgVideo}}
+
+  <div class="video-wrapper">
+    {{#if bgVideo.embedYt}}
+      <iframe
+        id="ytplayer"
+        class="hro-video-embed"
+        type="text/html"
+        width="640"
+        height="360"
+        src="https://www.youtube.com/embed/{{bgVideo.embedYt}}?autoplay=1&mute=1&controls=0&loop=1&disablekb=1&fs=0&modestbranding=1&playsinline=1&color=white&iv_load_policy=3&playlist={{bgVideo.embedYt}}"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    {{/if}}
+    {{#if bgVideo.embedVim}}
+      <iframe
+        id="vimplayer"
+        class="hro-video-embed"
+        type="text/html"
+        width="640"
+        height="360"
+        src="https://player.vimeo.com/video/{{bgVideo.embedVim}}?background=true&autopause=false"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    {{/if}}
+    {{#if bgVideo.video}}
+      <video class="hro-video" autoplay muted loop>
+        <source src="{{root}}/assets/video/{{bgVideo.video}}" type="video/mp4">
+      </video>
+    {{/if}}
+  </div>
+  {{/if}}
+
+</header>

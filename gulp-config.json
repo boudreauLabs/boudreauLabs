@@ -1,0 +1,76 @@
+{
+  "browserSync": {
+    "options" : {
+      "server": {
+        "baseDir": "./build/"
+      },
+      "port": 3000,
+      "watch": true
+    }
+  },
+
+  "paths" : {
+    "dev": "./src",
+    "dist": "./build",
+
+    "clean": "./build",
+
+    "copy": {
+      "root": [
+        "./src/site.webmanifest",
+        "./src/browserconfig.xml",
+        "./src/*.ico",
+        "./src/*.svg",
+        "./src/*.png"
+      ],
+      "fonts": {
+        "in": [
+          "./src/assets/fonts/**/*.*"
+        ],
+        "out": "./build/assets/fonts/"
+      },
+      "files": {
+        "in": [
+          "./src/assets/files/**/*.*"
+        ],
+        "out": "./build/assets/files/"
+      },
+      "images": {
+        "in": ["./src/assets/images/**/*.*"],
+        "out": "./build/assets/images/"
+      },
+      "video": {
+        "in": ["./src/assets/videos/*.*"],
+        "out": "./build/assets/videos/"
+      }
+    },
+
+    "styles": {
+      "in": "./src/assets/scss/bdl.styles.scss",
+      "out": "./build/assets/css",
+      "watch": [
+        "./src/assets/scss/**/*.scss"
+      ]
+    },
+
+    "scripts": {
+      "in": "./src/assets/scripts/bdl.main.js",
+      "out": "./build/assets/scripts/",
+      "output_name": "bdl.main",
+      "watch": ["./src/assets/scripts/**/*.js"],
+      "vendor": {
+        "in": [
+          "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+        ],
+        "out": "./build/assets/scripts/",
+        "output_name": "bdl.vendor"
+      }
+    },
+
+    "images": {
+      "in": "./src/assets/img/**/*",
+      "out": "./build/assets/img/",
+      "watch": ["./src/assets/img/**/*"]
+    }
+  }
+}

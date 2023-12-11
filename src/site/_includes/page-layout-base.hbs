@@ -1,0 +1,36 @@
+{{!--
+
+  Example:
+  --------
+  {{#>page-layout-base}}
+    {{#*inline "header-content"}}
+    {{/inline}}
+    {{#*inline "main-content"}}
+    {{/inline}}
+    {{#*inline "footer-content"}}
+    {{/inline}}
+    {{#*inline "end-page-content"}}
+    {{/inline}}
+  {{/page-layout-base}}
+
+ --}}
+<!-- BEGIN: Header Content -->
+{{#>header-content}}
+{{/header-content}}
+<!-- END: Header Content -->
+<main id="main-content" tabindex="0">
+  <!-- BEGIN: Main Content -->
+  {{#>main-content}}
+  {{/main-content}}
+  <!-- END: Main Content -->
+</main>
+<footer>
+  <!-- BEGIN: Main Content -->
+  {{#>footer-content}}
+  {{/footer-content}}
+  <!-- END: Main Content -->
+</footer>
+<!-- BEGIN: Main Content -->
+{{#>end-page-content}}
+{{/end-page-content}}
+<!-- END: Main Content -->
