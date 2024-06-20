@@ -16,13 +16,7 @@
     "clean": "./build",
 
     "copy": {
-      "root": [
-        "./src/site.webmanifest",
-        "./src/browserconfig.xml",
-        "./src/*.ico",
-        "./src/*.svg",
-        "./src/*.png"
-      ],
+      "root": [ "./src/assets/root/*.*" ],
       "fonts": {
         "in": [
           "./src/assets/fonts/**/*.*"
