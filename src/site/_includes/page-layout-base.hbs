@@ -9,7 +9,7 @@
     {{/inline}}
     {{#*inline "footer-content"}}
     {{/inline}}
-    {{#*inline "end-page-content"}}
+    {{#*inline "end-page-include"}}
     {{/inline}}
   {{/page-layout-base}}
 
@@ -24,13 +24,12 @@
   {{/main-content}}
   <!-- END: Main Content -->
 </main>
-<footer>
-  <!-- BEGIN: Main Content -->
+  <!-- BEGIN: Footer Content -->
   {{#>footer-content}}
+    {{>footer}}
   {{/footer-content}}
-  <!-- END: Main Content -->
-</footer>
-<!-- BEGIN: Main Content -->
-{{#>end-page-content}}
-{{/end-page-content}}
-<!-- END: Main Content -->
+  <!-- END: Footer Content -->
+<!-- BEGIN: End of Page include -->
+{{#>end-page-include}}
+{{/end-page-include}}
+<!-- END: End of Page include -->

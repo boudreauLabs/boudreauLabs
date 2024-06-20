@@ -1,0 +1,34 @@
+---
+layout: default
+
+meta:
+  pgTitle: Boudreau Labs - Basic Page
+  pgDesc: Page description
+
+---
+{{#>page-layout-base}}
+  {{#*inline "header-content"}}
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col">
+        <h1>Header</h1>
+      </div>
+    </div>
+  </div>
+  {{/inline}}
+  {{#*inline "main-content"}}
+    <section class="py-5 text-bg-dark">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col">
+            <p>Main content area</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{/inline}}
+  {{!-- {{#*inline "footer-content"}}
+  {{/inline}}
+  {{#*inline "end-page-content"}}
+  {{/inline}} --}}
+{{/page-layout-base}}
