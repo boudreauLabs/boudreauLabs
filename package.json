@@ -10,7 +10,7 @@
     "clean": "gulp clean",
     "sass": "sass --watch src/assets/scss:build/assets/css",
     "sass:prod": "sass --style=compressed src/assets/scss:build/assets/css",
-    "watch": "npm-run-all clean --parallel gulp 11ty sass",
+    "dev": "npm-run-all clean --parallel 11ty gulp sass",
     "build": "npm-run-all clean --parallel gulp:prod 11ty:prod sass:prod"
   },
   "author": "",
@@ -23,7 +23,7 @@
     "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.3",
     "del": "^5.1.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^3.0.0",
