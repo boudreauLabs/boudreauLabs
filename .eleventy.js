@@ -1,8 +1,9 @@
 let path = require('path');
 let Handlebars = require('handlebars');
-let hbHelpers = require('handlebars-helpers')(['comparison', 'array', 'object', 'math']);
+let hbHelpers = require('@jaredwray/fumanchu').handlebarHelpers;
 let htmlmin = require('html-minifier');
 let pretty = require('pretty');
+hbHelpers({ handlebars: Handlebars });
 
 module.exports = function(eleventyConfig) {
   /* ==================== */
@@ -17,7 +18,7 @@ module.exports = function(eleventyConfig) {
   /*
    * Large collection of a wide variety of Handlebars helpers.
    * Make sure to include the proper collection(s) when importing this library
-   * Full list of helpers: https://github.com/helpers/handlebars-helpers
+   * Full list of helpers: https://github.com/jaredwray/fumanchu
    */
   eleventyConfig.addHandlebarsHelper(hbHelpers);
 

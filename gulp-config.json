@@ -54,7 +54,8 @@
       "watch": ["./src/assets/scripts/**/*.js"],
       "vendor": {
         "in": [
-          "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+          "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+          "./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"
         ],
         "out": "./build/assets/scripts/",
         "output_name": "bdl.vendor"
