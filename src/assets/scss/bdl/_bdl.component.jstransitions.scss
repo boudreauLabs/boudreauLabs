@@ -1,0 +1,10 @@
+.js-fadein {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

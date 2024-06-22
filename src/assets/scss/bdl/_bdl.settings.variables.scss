@@ -1,3 +1,6 @@
+// Bootstrap Variables
+// https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+
 // =======
 // Options
 // =======
@@ -7,14 +10,14 @@ $enable-rounded:              false;
 $enable-shadows:              false;
 $enable-gradients:            false;
 $enable-transitions:          true;
-$enable-reduced-motion:       true;
+$enable-reduced-motion:       false;
 $enable-smooth-scroll:        true;
 $enable-grid-classes:         true;
 $enable-container-classes:    true;
 $enable-cssgrid:              false;
 $enable-button-pointers:      true;
 $enable-rfs:                  true;
-$enable-validation-icons:     true;
+$enable-validation-icons:     false;
 $enable-negative-margins:     false;
 $enable-deprecation-messages: true;
 $enable-important-utilities:  true;
@@ -28,15 +31,15 @@ $prefix:                      bdl-;
 // Color system
 // ============
 $white:    #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #6c757d;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
+$gray-100: #e2e2e2;
+$gray-200: #c6c6c6;
+$gray-300: #ababab;
+$gray-400: #919191;
+$gray-500: #777777;
+$gray-600: #5e5e5e;
+$gray-700: #474747;
+$gray-800: #303030;
+$gray-900: #1b1b1b;
 $black:    #000;
 
 $blue:    #0d6efd;
@@ -56,7 +59,7 @@ $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
-$light:         $gray-100;
+$light:         #ece4db;
 $dark:          $gray-900;
 
 $theme-colors: (
@@ -80,12 +83,113 @@ $color-contrast-dark:      $black;
 $color-contrast-light:     $white;
 
 
-// ====
+// =================
+// Components
+// =================
+$border-width:                1px;
+$border-widths:               (
+                                1: 1px,
+                                2: 2px,
+                                3: 3px,
+                                4: 4px,
+                                5: 5px
+                              );
+$border-style:                solid;
+$border-color:                $gray-300;
+$border-color-translucent:    rgba($black, .175);
+
+$border-radius:               .375rem;
+$border-radius-sm:            .25rem;
+$border-radius-lg:            .5rem;
+$border-radius-xl:            1rem;
+$border-radius-xxl:           2rem;
+$border-radius-pill:          50rem;
+$border-radius-2xl:           $border-radius-xxl; // Deprecated in v5.3.0
+
+$box-shadow:                  0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175);
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075);
+
+$component-active-color:      $white;
+$component-active-bg:         $primary;
+
+$focus-ring-width:            .25rem;
+$focus-ring-opacity:          .25;
+$focus-ring-color:            rgba($primary, $focus-ring-opacity);
+$focus-ring-blur:             0;
+$focus-ring-box-shadow:       0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
+
+$caret-width:                 .3em;
+$caret-vertical-align:        $caret-width * .85;
+$caret-spacing:               $caret-width * .85;
+
+$transition-base:             all .2s ease-in-out;
+$transition-fade:             opacity .15s linear;
+
+$transition-collapse:         height .35s ease;
+$transition-collapse-width:   width .35s ease;
+
+$aspect-ratios:               (
+                                "1x1": 100%,
+                                "4x3": calc(3 / 4 * 100%),
+                                "16x9": calc(9 / 16 * 100%),
+                                "21x9": calc(9 / 21 * 100%)
+                              );
+
+
+// =======
+// Spacing
+// =======
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+
+// ================
+// Grid Components
+// ================
+// Grid breakpoints
+$grid-breakpoints:      (
+
+                          xs: 0,
+                          sm: 576px,
+                          md: 768px,
+                          lg: 992px,
+                          xl: 1200px,
+                          xxl: 1400px
+                        );
+
+// Grid containers
+$container-max-widths:  (
+                          sm: 540px,
+                          md: 720px,
+                          lg: 960px,
+                          xl: 1140px,
+                          xxl: 1320px
+                        );
+
+// Grid columns
+$grid-columns:          12;
+$grid-gutter-width:     1.5rem;
+$grid-row-columns:      6;
+
+// Container padding
+$container-padding-x: $grid-gutter-width;
+
+
+// ==========
 // Body
-// ====
+// ==========
 $body-text-align:           null;
-$body-color:                $gray-900;
-$body-bg:                   $white;
+$body-color:                $gray-800;
+$body-bg:                   $light;
 
 $body-secondary-color:      rgba($body-color, .75);
 $body-secondary-bg:         $gray-200;
@@ -106,52 +210,6 @@ $link-hover-color:                        shift-color($link-color, $link-shade-p
 $link-hover-decoration:                   null;
 
 
-// =======
-// Spacing
-// =======
-$spacer: 1rem;
-$spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-);
-
-// ================
-// Grid Components
-// ================
-// Grid breakpoints
-$grid-breakpoints:      (
-                          xs: 0,
-                          sm: 576px,
-                          md: 768px,
-                          lg: 992px,
-                          xl: 1200px,
-                          xxl: 1440px,
-                          xxxl: 1660px
-                        );
-
-// Grid containers
-$container-max-widths:  (
-                          sm: 540px,
-                          md: 720px,
-                          lg: 960px,
-                          xl: 1140px,
-                          xxl: 1400px,
-                          xxxl: 1600px
-                        );
-
-// Grid columns
-$grid-columns:          12;
-$grid-gutter-width:     1.5rem;
-$grid-row-columns:      6;
-
-// Container padding
-$container-padding-x: $grid-gutter-width*2;
-
-
 // ==========
 // Typography
 // ==========
@@ -164,10 +222,10 @@ $rfs-breakpoint:              1200px;   // Viewport widths smaller than this val
 $rfs-factor:                  10;       // Lower the number = less effect. Default is 10.
 
 
-$font-family-sans-serif:      'Poppins', sans-serif;
+$font-family-sans-serif:      "Montserrat", sans-serif;
 
 $font-size-root:              null;
-$font-size-base:              1.125rem; // Assumes the browser default, typically `16px`
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
 $font-size-sm:                $font-size-base * .875;
 $font-size-lg:                $font-size-base * 1.25;
 
@@ -193,14 +251,12 @@ $h5-font-size:                $font-size-base * 1.25;
 $h6-font-size:                $font-size-base;
 
 $headings-margin-bottom:      $spacer * .5;
-$headings-font-family:        null;
+$headings-font-family:        "Karla", sans-serif;
 $headings-font-style:         null;
-$headings-font-weight:        $font-weight-normal;
+$headings-font-weight:        $font-weight-semibold;
 $headings-line-height:        1.2;
 $headings-color:              inherit;
 
-
-// scss-docs-start display-headings
 $display-font-sizes:          (
                                 1: 7rem,
                                 2: 5.5rem,
@@ -210,17 +266,15 @@ $display-font-sizes:          (
                                 6: 1.5rem
                               );
 
-$display-font-family:         'Anton', sans-serif;
+$display-font-family:         null;
 $display-font-style:          null;
 $display-font-weight:         $font-weight-normal;
-$display-line-height:         1;
+$display-line-height:         $headings-line-height;
 
 $lead-font-size:              $font-size-base * 1.25;
 $lead-font-weight:            300;
 
 $small-font-size:             .875em;
-
-
 
 // ===========================
 // Main Page Header

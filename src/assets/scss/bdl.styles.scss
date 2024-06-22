@@ -52,7 +52,7 @@
 // Settings
 // ================
 // Gather all function-specific sass files
-// @import "bdl/_bdl.function.*.scss";
+// @import "bdl/bdl.function.*";
 @import "../../../node_modules/bootstrap/scss/functions";
 
 @import 'bdl/bdl.settings.fonts';       // UI Fonts
@@ -68,7 +68,7 @@
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/utilities";
 // Gather all tool-specific sass files
-// @import "bdl/_bdl.tool.*.scss";
+// @import "bdl/bdl.tool.*";
 @import "bdl/bdl.tool.utilities";
 
 
@@ -77,6 +77,9 @@
 // =======
 @import "../../../node_modules/bootstrap/scss/root";
 @import "../../../node_modules/bootstrap/scss/reboot";
+// Gather all generic sass files
+// @import "bdl/bdl.generic.*";
+@import "bdl/bdl.generic.root";
 
 
 // ========
@@ -85,7 +88,7 @@
 @import "../../../node_modules/bootstrap/scss/type";
 @import "../../../node_modules/bootstrap/scss/images";
 // Gather all object-specific sass files
-// @import "bdl/_bdl.element.*.scss";
+// @import "bdl/bdl.element.*";
 
 
 // =======
@@ -94,7 +97,7 @@
 @import "../../../node_modules/bootstrap/scss/containers";
 @import "../../../node_modules/bootstrap/scss/grid";
 // Gather all object-specific sass files
-// @import "bdl/_bdl.object.*.scss";
+// @import "bdl/bdl.object.*";
 
 
 // ==========
@@ -105,7 +108,8 @@
 @import "../../../node_modules/bootstrap/scss/buttons";
 @import "../../../node_modules/bootstrap/scss/transitions";
 // Gather all component-specific sass files
-// @import "bdl/_bdl.component.*.scss";
+// @import "bdl/bdl.component.*";
+@import "bdl/bdl.component.jstransitions";
 
 
 // =======
@@ -121,7 +125,7 @@
 // @import "../../../node_modules/bootstrap/scss/pagination";
 // @import "../../../node_modules/bootstrap/scss/badge";
 // @import "../../../node_modules/bootstrap/scss/alert";
-// @import "../../../node_modules/bootstrap/scss/progress";
+@import "../../../node_modules/bootstrap/scss/progress";
 // @import "../../../node_modules/bootstrap/scss/list-group";
 @import "../../../node_modules/bootstrap/scss/close";
 // @import "../../../node_modules/bootstrap/scss/toasts";
@@ -133,7 +137,7 @@
 @import "../../../node_modules/bootstrap/scss/offcanvas";
 // @import "../../../node_modules/bootstrap/scss/placeholders";
 // Gather all module-specific sass files
-// @import "bdl/_bdl.module.*.scss";
+// @import "bdl/bdl.module.*";
 
 @import "bdl/bdl.module.hero";
 
@@ -145,7 +149,7 @@
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 
 // Gather all utility-specific sass files
-// @import "bdl/_bdl.utility.*.scss";
+// @import "bdl/bdl.utility.*";
 
 // ==================
 // Vendor (3rd Party)

@@ -5,23 +5,96 @@ meta:
   pgTitle: Boudreau Labs
   pgDesc: Homepage description
 
-blTempHead:
-  colorTheme: dark
-  minHeight: 100
-  cntJustify: center
-  cntAlign: center
-  cntTextAlign: center
-  fluidContainer: false
-  bgImage:
-    bgImageSm: url('../images/bg-img/bg-img-04-sm.jpg')
-    bgImageLg: url('../images/bg-img/bg-img-04.jpg')
-    bgPos: cc
+thing:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 
 ---
-{{#>header blTempHead}}
-  {{!-- {{#*inline "nav-content"}}
-  {{/inline}} --}}
-  {{#*inline "header-content"}}
-  <img src="{{root}}/assets/images/bl-logo.png" alt="Boudreau Labs" class="img-logo">
-  {{/inline}}
-{{/header}}
+<header>
+  <div class="container-xxl">
+    <div class="row align-items-center py-5">
+      <div class="col-lg-5 col-xxl-4">
+        <img src="{{root}}/assets/images/mindbulb-beakers.png" alt="" class="img-fluid" height="696" width="450">
+      </div>
+      <div class="col offset-xxl-1">
+        <h1>Aaron Boudreau</h1>
+        <p class="fs-4">Frontend Developer</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia nihil eos possimus.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main-content" tabindex="0">
+  {{!-- Careers --}}
+  <section>
+    <div class="container-xxl">
+      <div class="row gy-3">
+        <div class="col-lg-4 col-xxl-3">
+          <img src="{{root}}/assets/images/bl-bottle01.png" alt="" class="img-fluid" height="350" width="185">
+          <div class="sticky-top pt-5">
+            <h2>Careers</h2>
+          </div>
+        </div>
+        <div class="col offset-lg-1 offset-xxl-2 py-5">
+          {{#each thing}}
+          <p class="h4">
+            Position {{add @index 1}}
+            <span class="d-block pt-1 fs-5">Thing subtitle</span>
+          </p>
+          <p>Blanditiis animi ab nulla debitis dolores deleniti beatae accusamus nihil, voluptas ullam sequi illo molestias aspernatur eius? Iusto accusantium, harum inventore consequatur, eveniet obcaecati sequi veniam officiis quod exercitationem aliquid!</p>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{!-- Abilities --}}
+  <section>
+    <div class="container-xxl">
+      <div class="row gy-3">
+        <div class="col-lg-4 col-xxl-3">
+          <div class="sticky-top pt-5">
+            <h2>Abilities</h2>
+          </div>
+        </div>
+        <div class="col offset-lg-1 offset-xxl-2 py-5">
+          {{#each thing}}
+          <h3>Ability {{add @index 1}} <span class="fs-5 text-subtle">ability subtitle</span></h3>
+          <div class="progress mb-4 js-progress" data-progress-width="{{random 35 100}}%" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{!-- Projects --}}
+  <section>
+    <div class="container-xxl">
+      <div class="row gy-3">
+        <div class="col-lg-4 col-xxl-3">
+          <img src="{{root}}/assets/images/bl-bottle02.png" alt="" class="img-fluid" height="250" width="140">
+          <div class="sticky-top pt-5">
+            <h2>Projects</h2>
+          </div>
+        </div>
+        <div class="col offset-lg-1 offset-xxl-2 py-5">
+          {{#each thing}}
+          <div class="text-bg-dark p-4 mb-2 js-fadein">
+            <h3>Project {{add @index 1}}</h3>
+            <p class="fs-5">Project Subtitle</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque voluptatibus consectetur explicabo sapiente dolores veniam, minus earum, dicta deserunt animi magnam nam non pariatur voluptatem nobis atque ducimus doloremque nulla.</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{>footer}}
