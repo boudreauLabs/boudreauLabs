@@ -60,12 +60,15 @@
         "out": "./build/assets/scripts/",
         "output_name": "bdl.vendor"
       }
-    },
-
-    "images": {
-      "in": "./src/assets/img/**/*",
-      "out": "./build/assets/img/",
-      "watch": ["./src/assets/img/**/*"]
+    }
+  },
+  "plugins" : {
+    "eleventyImages": {
+      "urlPath": "/assets/images/",
+      "outputDir": "./build/assets/images/",
+      "sizes": "(min-width: 1024px) 100vw, 50vw",
+      "widths": [600, 900, 1500],
+      "formats": ["webp", "jpeg"]
     }
   }
 }

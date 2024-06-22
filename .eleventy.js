@@ -2,7 +2,10 @@ let path = require('path');
 let Handlebars = require('handlebars');
 let hbHelpers = require('@jaredwray/fumanchu').handlebarHelpers;
 let htmlmin = require('html-minifier');
+let Image = require("@11ty/eleventy-img");
 let pretty = require('pretty');
+
+const cfg = require( './gulp-config.json' );
 hbHelpers({ handlebars: Handlebars });
 
 module.exports = function(eleventyConfig) {
@@ -21,6 +24,63 @@ module.exports = function(eleventyConfig) {
    * Full list of helpers: https://github.com/jaredwray/fumanchu
    */
   eleventyConfig.addHandlebarsHelper(hbHelpers);
+
+  /* ================== */
+  /* 11ty Image Plugin  */
+  /* ================== */
+  /*
+   * 11ty Image plugin docs
+   * https://www.11ty.dev/docs/plugins/image/
+   */
+	function imageShortcode(src, alt, sizes, modifier) {
+    // console.log(`Generating image(s) from:  ${src}`)
+    // Assign default size if not defined
+    sizes = typeof sizes == 'string' ? sizes : cfg.plugins.eleventyImages.sizes;
+		let options = {
+			widths: cfg.plugins.eleventyImages.widths,
+			formats: cfg.plugins.eleventyImages.formats,
+			urlPath: cfg.plugins.eleventyImages.urlPath,
+			outputDir: cfg.plugins.eleventyImages.outputDir,
+			filenameFormat: function (id, src, width, format, options) {
+				const extension = path.extname(src)
+				const name = path.basename(src, extension)
+				return `${name}-${width}w.${format}`
+			}
+		}
+
+		// generate images
+		Image(src, options)
+
+    // Image attributes
+		let imageAttributes = {
+      alt,
+			sizes,
+			loading: "lazy",
+			decoding: "async",
+		}
+
+    // Add modifier class if available
+    if (typeof modifier !== undefined) {
+      imageAttributes.class = modifier
+    }
+
+    // get metadata
+		metadata = Image.statsSync(src, options)
+		return Image.generateHTML(metadata, imageAttributes)
+	}
+  /*
+   * Handlebar useage
+   * {{{image
+   *    @src        source file to process
+   *    @alt        image alt text
+   *    @sizes      Optional | image tag sizes attribute | Defualts to '(min-width: 1024px) 100vw, 50vw'
+   *    @modifier   Optional | image class attibute
+   * }}}
+   * Example: {{{image "path/to/sorce/file.ext" "photo alt" "image size:optional" 'image class:optional'}}}
+   */
+  eleventyConfig.addShortcode('image', imageShortcode)
+
+
 
   /*
    * Calculates the relative path back to root for project assets and links
