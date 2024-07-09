@@ -67,7 +67,7 @@
       "urlPath": "/assets/images/",
       "outputDir": "./build/assets/images/",
       "sizes": "(min-width: 1024px) 100vw, 50vw",
-      "widths": [600, 900, 1500],
+      "widths": [320, 800, 1200, 1500],
       "formats": ["webp", "jpeg"]
     }
   }

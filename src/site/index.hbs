@@ -16,8 +16,13 @@ thing:
 <header>
   <div class="container-xxl">
     <div class="row align-items-center py-5">
+      <div class="col-12">
+        {{!-- {{{image "src/assets/images/bg-img/bg-img-04.jpg" "Boudreau Labs" null 'img-fluid'}}} --}}
+        {{{image "src/assets/images/bg-img/bg-img-04.jpg" "Boudreau Labs" "250px" 'img-fluid'}}}
+      </div>
       <div class="col-lg-5 col-xxl-4">
-        <img src="{{root}}/assets/images/mindbulb-beakers.png" alt="" class="img-fluid" height="696" width="450">
+        {{!-- <img src="{{root}}/assets/images/mindbulb-beakers.png" alt="" class="img-fluid" height="696" width="450"> --}}
+        {{{image "src/assets/images/mindbulb-beakers.png" "Boudreau Labs" null 'img-fluid'}}}
       </div>
       <div class="col offset-xxl-1">
         <h1>Aaron Boudreau</h1>
@@ -30,22 +35,13 @@ thing:
 
 <main id="main-content" tabindex="0">
 
-  <section class="py-3 text-bg-secondary">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          {{{image "src/assets/images/bg-img/bg-img-05.jpg" "photo of my tabby cat" null 'img-fluid'}}}
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Careers -->
   <section>
     <div class="container-xxl">
       <div class="row gy-3">
         <div class="col-lg-4 col-xxl-3">
-          <img src="{{root}}/assets/images/bl-bottle01.png" alt="" class="img-fluid" height="350" width="185">
+          {{{image "src/assets/images/bl-bottle01.png" "" null 'img-fluid'}}}
+          {{!-- <img src="{{root}}/assets/images/bl-bottle01.png" alt="" class="img-fluid" height="350" width="185"> --}}
           <div class="sticky-top pt-5">
             <h2>Careers</h2>
           </div>
@@ -89,7 +85,8 @@ thing:
     <div class="container-xxl">
       <div class="row gy-3">
         <div class="col-lg-4 col-xxl-3">
-          <img src="{{root}}/assets/images/bl-bottle02.png" alt="" class="img-fluid" height="250" width="140">
+          {{{image "src/assets/images/bl-bottle02.png" "" null 'img-fluid'}}}
+          {{!-- <img src="{{root}}/assets/images/bl-bottle02.png" alt="" class="img-fluid" height="250" width="140"> --}}
           <div class="sticky-top pt-5">
             <h2>Projects</h2>
           </div>
