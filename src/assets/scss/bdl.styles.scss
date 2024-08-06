@@ -52,11 +52,12 @@
 // Settings
 // ================
 // Gather all function-specific sass files
-// @import "bdl/bdl.function.*";
+// @import "function.*";
 @import "../../../node_modules/bootstrap/scss/functions";
+@import "function.spacing";
 
-@import 'bdl/bdl.settings.fonts';       // UI Fonts
-@import 'bdl/bdl.settings.variables';	// UI Variables
+@import 'settings.fonts';       // UI Fonts
+@import 'settings.variables';	// UI Variables
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/variables-dark";
 
@@ -68,8 +69,8 @@
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/utilities";
 // Gather all tool-specific sass files
-// @import "bdl/bdl.tool.*";
-@import "bdl/bdl.tool.utilities";
+// @import "tool.*";
+@import "tool.utilities";
 
 
 // =======
@@ -78,8 +79,8 @@
 @import "../../../node_modules/bootstrap/scss/root";
 @import "../../../node_modules/bootstrap/scss/reboot";
 // Gather all generic sass files
-// @import "bdl/bdl.generic.*";
-@import "bdl/bdl.generic.root";
+// @import "generic.*";
+@import "generic.root";
 
 
 // ========
@@ -88,7 +89,7 @@
 @import "../../../node_modules/bootstrap/scss/type";
 @import "../../../node_modules/bootstrap/scss/images";
 // Gather all object-specific sass files
-// @import "bdl/bdl.element.*";
+// @import "element.*";
 
 
 // =======
@@ -97,7 +98,8 @@
 @import "../../../node_modules/bootstrap/scss/containers";
 @import "../../../node_modules/bootstrap/scss/grid";
 // Gather all object-specific sass files
-// @import "bdl/bdl.object.*";
+// @import "object.*";
+@import "object.sections";
 
 
 // ==========
@@ -108,24 +110,24 @@
 @import "../../../node_modules/bootstrap/scss/buttons";
 @import "../../../node_modules/bootstrap/scss/transitions";
 // Gather all component-specific sass files
-// @import "bdl/bdl.component.*";
-@import "bdl/bdl.component.jstransitions";
+// @import "component.*";
+@import "component.jstransitions";
 
 
 // =======
 // Modules
 // =======
-@import "../../../node_modules/bootstrap/scss/dropdown";
+// @import "../../../node_modules/bootstrap/scss/dropdown";
 // @import "../../../node_modules/bootstrap/scss/button-group";
-// @import "../../../node_modules/bootstrap/scss/nav";
-// @import "../../../node_modules/bootstrap/scss/navbar";
+@import "../../../node_modules/bootstrap/scss/nav";
+@import "../../../node_modules/bootstrap/scss/navbar";
 @import "../../../node_modules/bootstrap/scss/card";
 // @import "../../../node_modules/bootstrap/scss/accordion";
 // @import "../../../node_modules/bootstrap/scss/breadcrumb";
 // @import "../../../node_modules/bootstrap/scss/pagination";
-// @import "../../../node_modules/bootstrap/scss/badge";
+@import "../../../node_modules/bootstrap/scss/badge";
 // @import "../../../node_modules/bootstrap/scss/alert";
-@import "../../../node_modules/bootstrap/scss/progress";
+// @import "../../../node_modules/bootstrap/scss/progress";
 // @import "../../../node_modules/bootstrap/scss/list-group";
 @import "../../../node_modules/bootstrap/scss/close";
 // @import "../../../node_modules/bootstrap/scss/toasts";
@@ -134,12 +136,12 @@
 // @import "../../../node_modules/bootstrap/scss/popover";
 // @import "../../../node_modules/bootstrap/scss/carousel";
 // @import "../../../node_modules/bootstrap/scss/spinners";
-@import "../../../node_modules/bootstrap/scss/offcanvas";
+// @import "../../../node_modules/bootstrap/scss/offcanvas";
 // @import "../../../node_modules/bootstrap/scss/placeholders";
 // Gather all module-specific sass files
-// @import "bdl/bdl.module.*";
-
-@import "bdl/bdl.module.hero";
+// @import "module.*";
+@import "module.footer";
+@import "module.modal";
 
 
 // =========
@@ -149,11 +151,13 @@
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 
 // Gather all utility-specific sass files
-// @import "bdl/bdl.utility.*";
+// @import "utility.*";
+@import "utility.position";
 
 // ==================
 // Vendor (3rd Party)
 // ==================
+@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
 // =====
 // Shame

@@ -41,6 +41,7 @@ module.exports = function(eleventyConfig) {
 			formats: cfg.plugins.eleventyImages.formats,
 			urlPath: cfg.plugins.eleventyImages.urlPath,
 			outputDir: cfg.plugins.eleventyImages.outputDir,
+      svgAllowUpscale: false,
 			filenameFormat: function (id, src, width, format, options) {
 				const extension = path.extname(src)
 				const name = path.basename(src, extension)

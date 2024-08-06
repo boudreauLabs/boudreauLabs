@@ -55,8 +55,8 @@ function copyAssets(done) {
       .pipe(dest(paths.copy.files.out));
 
   // Fonts
-  // src(paths.copy.fonts.in, {encoding: false})
-  //     .pipe(dest(paths.copy.fonts.out));
+  src(paths.copy.fonts.in, {encoding: false})
+      .pipe(dest(paths.copy.fonts.out));
 
   // Project video files
   // src(paths.copy.video.in, {encoding: false})

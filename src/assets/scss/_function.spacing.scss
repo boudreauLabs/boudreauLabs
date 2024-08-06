@@ -1,0 +1,7 @@
+@function spacing($key: 3) {
+  @return map-get($spacers, $key);
+}
+
+@function space($mapName, $key: 3) {
+  @return map-get($mapName, $key);
+}

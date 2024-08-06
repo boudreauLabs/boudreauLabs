@@ -5,104 +5,254 @@ meta:
   pgTitle: Boudreau Labs
   pgDesc: Homepage description
 
-thing:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
+skillList:
+  - HTML
+  - CSS
+  - JavaScript
+  - Wordpress
+  - PHP
+  - SASS
+  - GIT
+  - Github
+  - Responsive Design
+  - Terminal
+  - Static Site Generators
+  - CI/CD Pipelines
+  - JAMstack
 
+currentProjects:
+  - title: Moss Creek - 360 Pano Gallery
+    projectUrl: https://gallery.mosscreekmedia.com/
+    modId: projectMC
+    badges:
+      - JAMstack
+      - UI Design
+      - Javascript
+  - title: Heron Point Seafood
+    projectUrl: null
+    modId: projectHPC
+    badges:
+      - Product Design
+  - title: Boudreau Heirloom
+    projectUrl: https://heirloom.boudreaulabs.com/
+    modId: projectBFH
+    badges:
+      - UI Design
+      - Frontend Coding
+  - title: Ker & Downey
+    projectUrl: https://kerdowney.com/
+    modId: projectKD
+    badges:
+      - UI Design
+      - Frontend Coding
+  - title: Kallista
+    projectUrl: https://www.kallista.com/
+    modId: projectKLSTA
+    badges:
+      - UI Design
+      - Frontend Coding
+  - title: Portsmouth Harbor Cruise
+    projectUrl: https://portsmouthharbor.com/our-cruises/interactive-cruise-map
+    modId: projectPHC
+    badges:
+      - Frontend Coding
+      - Javascript
 ---
 <header>
+  <nav id="mainNav" class="navbar bg-black navbar-expand-xxl fixed-top" data-bs-theme="dark">
+    <div class="container-xxl">
+      <a class="navbar-brand" href="#">
+        {{{image "src/assets/images/bl-logo.svg" "Boudreau Labs" null null}}}
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link"href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div class="container-xxl">
-    <div class="row align-items-center py-5">
-      <div class="col-12">
-        {{!-- {{{image "src/assets/images/bg-img/bg-img-04.jpg" "Boudreau Labs" null 'img-fluid'}}} --}}
-        {{{image "src/assets/images/bg-img/bg-img-04.jpg" "Boudreau Labs" "250px" 'img-fluid'}}}
-      </div>
-      <div class="col-lg-5 col-xxl-4">
+    <div class="row align-items-center min-vh-50 py-5">
+      <div class="col-lg-10 col-xxl-7">
         {{!-- <img src="{{root}}/assets/images/mindbulb-beakers.png" alt="" class="img-fluid" height="696" width="450"> --}}
-        {{{image "src/assets/images/mindbulb-beakers.png" "Boudreau Labs" null 'img-fluid'}}}
-      </div>
-      <div class="col offset-xxl-1">
-        <h1>Aaron Boudreau</h1>
-        <p class="fs-4">Frontend Developer</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia nihil eos possimus.</p>
+        {{!-- {{{image "src/assets/images/mindbulb-beakers.png" "Boudreau Labs" null 'img-fluid'}}} --}}
+
+        <h1 class="display-3">Aaron Boudreau</h1>
+        <p class="h4">Creative Technologist</p>
+        <p class="lead">I'm a graphic designer, UX/UI designer &amp; front-end web developer. I love building engaging and accessible digital experiences.</p>
       </div>
     </div>
   </div>
 </header>
 
-<main id="main-content" tabindex="0">
+<main id="main-content" tabindex="0" data-bs-spy="scroll" data-bs-target="#mainNav">
 
-  <!-- Careers -->
-  <section>
+  {{!-- About --}}
+  <section class="section" id="about">
     <div class="container-xxl">
-      <div class="row gy-3">
-        <div class="col-lg-4 col-xxl-3">
-          {{{image "src/assets/images/bl-bottle01.png" "" null 'img-fluid'}}}
-          {{!-- <img src="{{root}}/assets/images/bl-bottle01.png" alt="" class="img-fluid" height="350" width="185"> --}}
-          <div class="sticky-top pt-5">
-            <h2>Careers</h2>
-          </div>
+      <div class="row">
+        <div class="col">
+          <h2>About</h2>
         </div>
-        <div class="col offset-lg-1 offset-xxl-2 py-5">
-          {{#each thing}}
-          <p class="h4">
-            Position {{add @index 1}}
-            <span class="d-block pt-1 fs-5">Thing subtitle</span>
-          </p>
-          <p>Blanditiis animi ab nulla debitis dolores deleniti beatae accusamus nihil, voluptas ullam sequi illo molestias aspernatur eius? Iusto accusantium, harum inventore consequatur, eveniet obcaecati sequi veniam officiis quod exercitationem aliquid!</p>
-          {{/each}}
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="h4">Getting to know me</h3>
+          <p>Ea a nemo distinctio fugit natus officia eum provident dolor pariatur, quos culpa perferendis cumque consectetur rerum nesciunt. Voluptas veniam doloremque explicabo repellat totam in quo itaque neque qui harum!</p>
+          <p>Recusandae, doloremque quaerat sunt quam autem suscipit consectetur maiores sequi nobis doloribus quibusdam laborum deserunt saepe. Id, voluptatibus voluptas quisquam aperiam doloribus, dignissimos dolorum expedita, ex consequuntur ad iure aliquam.</p>
+          <a class="btn btn-outline-primary" href="{{root}}/assets/files/aaron-boudreau-resume.pdf" download>My Resume</a>
+        </div>
+        <div class="col-lg-6 col-xxl-5 offset-xxl-1">
+          <h3 class="h4">Digital Skills</h3>
+          <div class="d-flex flex-wrap gap-2 fs-5 pt-1">
+            {{#each skillList}}
+            <span class="badge text-bg-secondary">{{this}}</span>
+            {{/each}}
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Abilities -->
-  <section>
+  {{!-- Projects --}}
+  <section class="section" id="projects">
     <div class="container-xxl">
-      <div class="row gy-3">
-        <div class="col-lg-4 col-xxl-3">
-          <div class="sticky-top pt-5">
-            <h2>Abilities</h2>
-          </div>
+      <div class="row">
+        <div class="col-lg-6 position-relative">
+          {{!-- <div class="sticky-top"> --}}
+            <h2>Recent Projects</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid eveniet inventore nisi illo iste sunt eum, neque, id quasi minus esse est hic voluptatem quae debitis amet alias minima!</p>
+          {{!-- </div> --}}
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
+            Launch demo modal
+          </button>
         </div>
-        <div class="col offset-lg-1 offset-xxl-2 py-5">
-          {{#each thing}}
-          <h3>Ability {{add @index 1}} <span class="fs-5 text-subtle">ability subtitle</span></h3>
-          <div class="progress mb-4 js-progress" data-progress-width="{{random 35 100}}%" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar" style="width: 0%"></div>
-          </div>
-          {{/each}}
+        <div class="col-lg-6 col-xxl-5 offset-xxl-1">
+
+          <ul class="list-unstyled d-flex flex-column gap-4">
+            {{#each currentProjects}}
+            <li>
+              <p class="fs-5 mb-2">
+                <a href="#{{modId}}" data-bs-toggle="modal"><span class="fs-6"><i class="bi bi-plus-lg me-1"></i></span>{{title}}</a>
+              </p>
+              <div class="d-flex gap-1 flex-wrap">
+                {{#if projectUrl}}
+                <a href="{{projectUrl}}" class="badge text-bg-primary" target="_blank">
+                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                  <span class="visually-hidden">Visit website</span>
+                </a>
+                {{/if}}
+                {{#each badges}}
+                  <span class="badge text-dark-emphasis bg-body-secondary">{{this}}</span>
+                {{/each}}
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section>
+  {{!-- Contact --}}
+  <section class="section" id="contact">
     <div class="container-xxl">
-      <div class="row gy-3">
-        <div class="col-lg-4 col-xxl-3">
-          {{{image "src/assets/images/bl-bottle02.png" "" null 'img-fluid'}}}
-          {{!-- <img src="{{root}}/assets/images/bl-bottle02.png" alt="" class="img-fluid" height="250" width="140"> --}}
-          <div class="sticky-top pt-5">
-            <h2>Projects</h2>
-          </div>
-        </div>
-        <div class="col offset-lg-1 offset-xxl-2 py-5">
-          {{#each thing}}
-          <div class="text-bg-dark p-4 mb-2 js-fadein">
-            <h3>Project {{add @index 1}}</h3>
-            <p class="fs-5">Project Subtitle</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque voluptatibus consectetur explicabo sapiente dolores veniam, minus earum, dicta deserunt animi magnam nam non pariatur voluptatem nobis atque ducimus doloremque nulla.</p>
-          </div>
-          {{/each}}
+      <div class="row">
+        <div class="col">
+          <h2>Let's Chat</h2>
         </div>
       </div>
-    </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xxl-7">
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid eveniet inventore nisi illo iste sunt eum, neque, id quasi minus esse est hic voluptatem quae debitis amet alias minima!</p>
+          <br>
+
+          {{!-- formspark.io form --}}
+          <form action="https://submit-form.com/{{#if frontofficecfg.production}}iba6EsFp5{{else}}echo{{/if}}" class="needs-validation" novalidate>
+
+            <div class="mb-3">
+              <label for="contactName" class="form-label">Your Name</label>
+              <input type="text" name="name" class="form-control" id="contactName" required>
+              <div class="invalid-feedback">
+                Please provide a name.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Email address</label>
+              <input type="email" name="email" class="form-control" id="contactEmail" required>
+              <div class="invalid-feedback">
+                Please provide a valid email address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea class="form-control" name="message" id="contactMessage" rows="4" required></textarea>
+              <div class="invalid-feedback">
+                Your message appears to be empty!
+              </div>
+            </div>
+
+            <div class="cf-turnstile mb-5" data-sitekey="0x4AAAAAAAgN8D0_jIR25tfy" data-theme="dark"></div>
+
+            <button class="btn btn-lg btn-outline-light" type="submit">Submit</button>
+          </form>
+
+        </div>
+        <div class="col-lg-4 offset-xxl-1">
+          <p class="h5">Email</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio commodi voluptate rem?</p>
+        </div>
   </section>
+
+  {{#each currentProjects}}
+
+    <!-- Project {{title}} Modal -->
+    {{#>modal title=title showTitle=true modId=modId colorMode="dark" modifier="modal-xl modal-dialog-centered modal-dialog-scrollable"}}
+      {{#*inline "modal-content"}}
+        <div class="row gy-2">
+          <div class="col-lg-7">
+            {{{image "src/assets/images/projects/portsmouth-harbor-cruise.png" "Boudreau Labs" null 'img-fluid'}}}
+          </div>
+          <div class="col-lg-4 offset-lg-1 d-flex flex-column">
+            <h4>Molestiae, excepturi. Dicta, libero</h4>
+            <p>Deleniti maxime quae, sint placeat, quam maiores laborum magni perspiciatis, molestias repellendus praesentium debitis accusamus labore sapiente? Sed, quaerat ea.</p>
+            <div class="d-flex flex-wrap gap-2 pt-1">
+              {{#each badges}}
+                <span class="badge text-dark-emphasis bg-body-secondary">{{this}}</span>
+              {{/each}}
+            </div>
+            <div class="d-flex gap-2 mt-auto">
+              {{#if projectUrl}}
+              <a href="{{projectUrl}}" class="btn btn-primary btn-sm" target="_blank">
+                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                Visit website
+              </a>
+              {{/if}}
+              <button type="button" class="btn btn-secondary btn-sm ms-auto" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      {{/inline}}
+      {{#*inline "modal-footer"}}
+      {{/inline}}
+    {{/modal}}
+  {{/each}}
 </main>
 
 {{>footer}}

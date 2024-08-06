@@ -17,6 +17,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "scrollmagic": "^2.0.8"
   },
   "devDependencies": {

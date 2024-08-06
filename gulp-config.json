@@ -18,9 +18,7 @@
     "copy": {
       "root": [ "./src/assets/root/*.*" ],
       "fonts": {
-        "in": [
-          "./src/assets/fonts/**/*.*"
-        ],
+        "in": ["./node_modules/bootstrap-icons/font/fonts/*.*"],
         "out": "./build/assets/fonts/"
       },
       "files": {

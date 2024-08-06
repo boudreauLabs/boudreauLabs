@@ -1,0 +1,9 @@
+.section {
+  padding-bottom: spacing(4);
+  padding-top: spacing(4);
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: spacing(5);
+    padding-top: spacing(5);
+  }
+}

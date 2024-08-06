@@ -2,37 +2,38 @@
 
   title: [string] - Modal title
   showTitle: [boolean] - Hide title text from modal
+  colorMode: [string] - change ui color mode. Values: dark, light. Default: light
   modId: [string] - Modal unique ID
   modifier: [string] - Additional display classes for the modal dialog
 
   Example:
   --------
-  {{modal componentData}}
+  {{#>modal componentData}}
     {{#*inline "modal-content"}}
     {{/inline}}
     {{#*inline "modal-footer"}}
     {{/inline}}
   {{/modal}}
 
- --}}
-<div class="modal fade" id="{{modId}}" tabindex="-1" aria-labelledby="{{modId}}Label" aria-hidden="true">
+--}}
+<div class="modal fade" id="{{modId}}" tabindex="-1" aria-labelledby="{{modId}}Label" aria-hidden="true" data-bs-theme="{{#if (eq colorMode 'dark')}}dark{{else}}light{{/if}}">
   <div class="modal-dialog{{#if modifier}} {{modifier}}{{/if}}">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="{{modId}}Label">{{#if showTitle}}{{title}}{{else}}<span class="visually-hidden">{{title}}</span>{{/if}}</h2>
+        <h2 class="modal-title fs-5" id="{{modId}}Label">{{#if showTitle}}{{title}}{{else}}<span class="visually-hidden">{{title}}</span>{{/if}}</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <!-- BEGIN: Modal Content -->
+        {{!-- BEGIN: Modal Content --}}
         {{#>modal-content}}
         {{/modal-content}}
-        <!-- END: Modal Content -->
+        {{!-- END: Modal Content --}}
       </div>
       {{#>modal-footer}}
-        <!-- BEGIN: Modal Footer -->
-        <div class="modal-footer">
-        </div>
-        <!-- END: Modal Footer -->
+      {{!-- BEGIN: Modal Footer --}}
+      <div class="modal-footer">
+      </div>
+      {{!-- END: Modal Footer --}}
       {{/modal-footer}}
     </div>
   </div>

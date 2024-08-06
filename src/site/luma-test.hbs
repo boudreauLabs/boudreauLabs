@@ -1,0 +1,79 @@
+---
+layout: default
+
+meta:
+  pgTitle: Boudreau Labs - Luma WebGL Test
+  pgDesc: Homepage description
+
+---
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/",
+    "@lumaai/luma-web": "https://unpkg.com/@lumaai/luma-web@0.2.0/dist/library/luma-web.module.js"
+  }
+}
+</script>
+<script type="module">
+  import { WebGLRenderer, PerspectiveCamera, Scene, Color, FogExp2 } from 'three';
+  // orbit controls
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+  import { LumaSplatsSemantics, LumaSplatsThree } from '@lumaai/luma-web';
+
+  let renderer = new WebGLRenderer({ antialias: false });
+
+  renderer.domElement.style.position = 'absolute';
+  renderer.domElement.style.width = '100%';
+  renderer.domElement.style.height = '100%';
+
+  // add canvas to DOM
+  document.body.appendChild(renderer.domElement);
+
+  let camera = new PerspectiveCamera(75, 1, 0.1, 1000);
+  camera.position.z = 2;
+
+  let controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+
+  let scene = new Scene();
+
+  let splat = new LumaSplatsThree({
+    // source: 'https://lumalabs.ai/capture/d80d4876-cf71-4b8a-8b5b-49ffac44cd4a',
+    // source: 'https://lumalabs.ai/embed/d99fb65d-c764-44d1-8d82-cdd279713765',
+    source: 'https://lumalabs.ai/embed/a458c1af-c1d7-49ef-bc0d-7ca98a1e8436?mode=sparkles',
+    // source: 'https://lumalabs.ai/embed/7d764b48-07fa-4031-852e-7c26cab4b903',
+    loadingAnimationEnabled: true,
+  });
+
+  scene.add(splat);
+
+  // filter splats to only show foreground layers
+  // splat.semanticsMask = LumaSplatsSemantics.FOREGROUND;
+  splat.semanticsMask = LumaSplatsSemantics.FOREGROUND | LumaSplatsSemantics.BACKGROUND
+
+  // Adding fog to scene
+  scene.fog = new FogExp2(new Color(0xdce0e8).convertLinearToSRGB(), 0.375);
+  scene.background = scene.fog.color;
+
+
+  function frameLoop() {
+    let canvas = renderer.domElement;
+    let width = canvas.clientWidth;
+    let height = canvas.clientHeight;
+
+    if (canvas.width !== width || canvas.height !== height) {
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height, false);
+    }
+
+    controls.update();
+
+    renderer.render(scene, camera);
+  }
+
+  renderer.setAnimationLoop(frameLoop);
+</script>
