@@ -90,6 +90,7 @@
 @import "../../../node_modules/bootstrap/scss/images";
 // Gather all object-specific sass files
 // @import "element.*";
+@import "element.type";
 
 
 // =======
@@ -142,6 +143,13 @@
 // @import "module.*";
 @import "module.footer";
 @import "module.modal";
+@import "../../../node_modules/swiper/swiper";
+@import "../../../node_modules/swiper/modules/a11y";
+@import "../../../node_modules/swiper/modules/autoplay";
+@import "../../../node_modules/swiper/modules/effect-fade";
+@import "../../../node_modules/swiper/modules/navigation";
+@import "../../../node_modules/swiper/modules/pagination";
+@import "module.swiper";
 
 
 // =========
@@ -159,12 +167,7 @@
 // ==================
 @import "../../../node_modules/bootstrap-icons/font/bootstrap-icons";
 
+
 // =====
 // Shame
 // =====
-.img-logo {
-  display: inline-block;
-  height: auto;
-  max-width: 40rem;
-  width: 100%;
-}

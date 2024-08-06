@@ -1,0 +1,44 @@
+// Project Images
+.swiper-project {
+  --swiper-pagination-bottom: 0;
+  --swiper-pagination-bullet-inactive-color: #{$primary};
+  --swiper-pagination-bullet-inactive-opacity: 0.375;
+  --swiper-navigation-size: #{spacing(3)};
+
+  padding-left: 2rem;
+
+  .swiper-controls {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1);
+    width: 1.5rem;
+  }
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    margin-bottom: spacing(3);
+    position: relative;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    gap: spacing(2);
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    left: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    height: 1.125rem;
+    width: spacing(3);
+    margin-bottom: spacing(1);
+    margin-top: 0;
+
+    &:hover,
+    &:focus {
+      --swiper-navigation-color: #{$light};
+    }
+
+  }
+}

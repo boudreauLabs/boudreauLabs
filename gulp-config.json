@@ -53,7 +53,8 @@
       "vendor": {
         "in": [
           "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-          "./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"
+          "./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
+          "./node_modules/swiper/swiper-bundle.min.js"
         ],
         "out": "./build/assets/scripts/",
         "output_name": "bdl.vendor"

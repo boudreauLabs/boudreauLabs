@@ -22,41 +22,78 @@ skillList:
 
 currentProjects:
   - title: Moss Creek - 360 Pano Gallery
-    projectUrl: https://gallery.mosscreekmedia.com/
     modId: projectMC
+    projectUrl: https://gallery.mosscreekmedia.com/
+    projectDetailTitle: Data driven panoramic gallery
+    projectDetail: 360 Panoramic gallery with multiple tag types, map integration and custom UI all driven from a spreadsheet.
     badges:
       - JAMstack
       - UI Design
       - Javascript
+      - Map Inegration
+    projectImgs:
+      - src/assets/images/projects/mosscreak-306gallery01.jpg
+      - src/assets/images/projects/mosscreak-306gallery02.jpg
+      - src/assets/images/projects/mosscreak-306gallery03.jpg
   - title: Heron Point Seafood
-    projectUrl: null
     modId: projectHPC
+    projectUrl: null
+    projectDetailTitle: Project Detail Title
+    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
     badges:
       - Product Design
-  - title: Boudreau Heirloom
-    projectUrl: https://heirloom.boudreaulabs.com/
-    modId: projectBFH
-    badges:
-      - UI Design
-      - Frontend Coding
   - title: Ker & Downey
-    projectUrl: https://kerdowney.com/
     modId: projectKD
-    badges:
-      - UI Design
-      - Frontend Coding
-  - title: Kallista
-    projectUrl: https://www.kallista.com/
-    modId: projectKLSTA
-    badges:
-      - UI Design
-      - Frontend Coding
-  - title: Portsmouth Harbor Cruise
-    projectUrl: https://portsmouthharbor.com/our-cruises/interactive-cruise-map
-    modId: projectPHC
+    projectUrl: https://kerdowney.com/
+    projectDetailTitle: Project Detail Title
+    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
     badges:
       - Frontend Coding
       - Javascript
+      - Map Inegration
+    projectImgs:
+      - src/assets/images/projects/ker-downey-01.jpg
+      - src/assets/images/projects/ker-downey-02.jpg
+      - src/assets/images/projects/ker-downey-03.jpg
+  - title: Kallista
+    modId: projectKLSTA
+    projectUrl: https://www.kallista.com/
+    projectDetailTitle: Project Detail Title
+    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
+    badges:
+      - Frontend Coding
+      - Javascript
+    projectImgs:
+      - src/assets/images/projects/kallista01.jpg
+      - src/assets/images/projects/kallista02.jpg
+  - title: Portsmouth Harbor Cruise
+    modId: projectPHC
+    projectUrl: https://portsmouthharbor.com/our-cruises/interactive-cruise-map
+    projectDetailTitle: Project Detail Title
+    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
+    badges:
+      - Frontend Coding
+      - Map Inegration
+    projectImgs:
+      - src/assets/images/projects/portsmouth-harbor-cruise01.jpg
+      - src/assets/images/projects/portsmouth-harbor-cruise02.jpg
+  - title: Cookie Jar Heirloom
+    projectUrl: https://heirloom.boudreaulabs.com/
+    projectImgs:
+      - src/assets/images/projects/heirloom00.jpg
+      - src/assets/images/projects/heirloom01.jpg
+      - src/assets/images/projects/heirloom04.jpg
+      - src/assets/images/projects/heirloom03.jpg
+    modId: projectBFH
+    badges:
+      - UI Design
+      - Print Design
+      - Frontend Coding
+      - 3D Rendering
+      - JAMstack
+    projectDetailTitle: Family Shenanigans
+    projectDetail: This homemade cookie jar has between passed between my family members now for over 30 years. I was lucky enough to have stewadship of this heirloom recently. Members of my family recieved a series of letters from a fake research agency telling the backstory of the heirloom.
+
 ---
 <header>
   <nav id="mainNav" class="navbar bg-black navbar-expand-xxl fixed-top" data-bs-theme="dark">
@@ -85,7 +122,7 @@ currentProjects:
 
   <div class="container-xxl">
     <div class="row align-items-center min-vh-50 py-5">
-      <div class="col-lg-10 col-xxl-7">
+      <div class="col-lg-10 col-xxl-6">
         {{!-- <img src="{{root}}/assets/images/mindbulb-beakers.png" alt="" class="img-fluid" height="696" width="450"> --}}
         {{!-- {{{image "src/assets/images/mindbulb-beakers.png" "Boudreau Labs" null 'img-fluid'}}} --}}
 
@@ -110,8 +147,8 @@ currentProjects:
       <div class="row">
         <div class="col-lg-6">
           <h3 class="h4">Getting to know me</h3>
-          <p>Ea a nemo distinctio fugit natus officia eum provident dolor pariatur, quos culpa perferendis cumque consectetur rerum nesciunt. Voluptas veniam doloremque explicabo repellat totam in quo itaque neque qui harum!</p>
-          <p>Recusandae, doloremque quaerat sunt quam autem suscipit consectetur maiores sequi nobis doloribus quibusdam laborum deserunt saepe. Id, voluptatibus voluptas quisquam aperiam doloribus, dignissimos dolorum expedita, ex consequuntur ad iure aliquam.</p>
+          <p>I am a detail-oriented and skilled front-end developer with a history in print and digital design. I have evolved into a skilled professional with a keen eye for aesthetics and a lens on accessibility.</p>
+          <p>I bring a unique blend of skills and experience to any creative project; driving projects to excellence and ensuring they resonate with a diverse audience.</p>
           <a class="btn btn-outline-primary" href="{{root}}/assets/files/aaron-boudreau-resume.pdf" download>My Resume</a>
         </div>
         <div class="col-lg-6 col-xxl-5 offset-xxl-1">
@@ -131,31 +168,29 @@ currentProjects:
     <div class="container-xxl">
       <div class="row">
         <div class="col-lg-6 position-relative">
-          {{!-- <div class="sticky-top"> --}}
-            <h2>Recent Projects</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid eveniet inventore nisi illo iste sunt eum, neque, id quasi minus esse est hic voluptatem quae debitis amet alias minima!</p>
-          {{!-- </div> --}}
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
-            Launch demo modal
-          </button>
+          <h2>Recent Projects</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid eveniet inventore nisi illo iste sunt eum, neque, id quasi minus esse est hic voluptatem quae debitis amet alias minima!</p>
         </div>
         <div class="col-lg-6 col-xxl-5 offset-xxl-1">
 
-          <ul class="list-unstyled d-flex flex-column gap-4">
+          <ul class="list-projects">
             {{#each currentProjects}}
             <li>
+              {{!-- {{#if projectImgs}}
+                {{{image projectImgs.[0] title null 'img-fluid'}}}
+              {{/if}} --}}
               <p class="fs-5 mb-2">
-                <a href="#{{modId}}" data-bs-toggle="modal"><span class="fs-6"><i class="bi bi-plus-lg me-1"></i></span>{{title}}</a>
+                <a class="stretched-link" href="#{{modId}}" data-bs-toggle="modal"><i class="bi bi-plus-lg me-1 fs-6"></i>{{title}}</a>
               </p>
               <div class="d-flex gap-1 flex-wrap">
-                {{#if projectUrl}}
+                {{!-- {{#if projectUrl}}
                 <a href="{{projectUrl}}" class="badge text-bg-primary" target="_blank">
                   <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                   <span class="visually-hidden">Visit website</span>
                 </a>
-                {{/if}}
+                {{/if}} --}}
                 {{#each badges}}
-                  <span class="badge text-dark-emphasis bg-body-secondary">{{this}}</span>
+                  <span class="badge bg-secondary">{{this}}</span>
                 {{/each}}
               </div>
             </li>
@@ -208,7 +243,20 @@ currentProjects:
               </div>
             </div>
 
-            <div class="cf-turnstile mb-5" data-sitekey="0x4AAAAAAAgN8D0_jIR25tfy" data-theme="dark"></div>
+            <div class="mb-5">
+              <div class="cf-turnstile"
+                data-sitekey="0x4AAAAAAAgN8D0_jIR25tfy"
+                data-callback="turnstileCallback"
+                data-error-callback="turnstileErrorCallback"
+                data-theme="dark">
+              </div>
+              {{!-- <div class="cf-turnstile"
+                data-sitekey="2x00000000000000000000AB"
+                data-callback="turnstileCallback"
+                data-error-callback="turnstileErrorCallback"
+                data-theme="dark">
+              </div> --}}
+            </div>
 
             <button class="btn btn-lg btn-outline-light" type="submit">Submit</button>
           </form>
@@ -220,23 +268,23 @@ currentProjects:
         </div>
   </section>
 
+  {{!-- Project Modals --}}
   {{#each currentProjects}}
-
     <!-- Project {{title}} Modal -->
-    {{#>modal title=title showTitle=true modId=modId colorMode="dark" modifier="modal-xl modal-dialog-centered modal-dialog-scrollable"}}
+    {{#>modal title=title showTitle=false modId=modId colorMode="dark" modifier="modal-xl modal-dialog-centered modal-dialog-scrollable"}}
       {{#*inline "modal-content"}}
         <div class="row gy-2">
-          <div class="col-lg-7">
-            {{{image "src/assets/images/projects/portsmouth-harbor-cruise.png" "Boudreau Labs" null 'img-fluid'}}}
-          </div>
-          <div class="col-lg-4 offset-lg-1 d-flex flex-column">
-            <h4>Molestiae, excepturi. Dicta, libero</h4>
-            <p>Deleniti maxime quae, sint placeat, quam maiores laborum magni perspiciatis, molestias repellendus praesentium debitis accusamus labore sapiente? Sed, quaerat ea.</p>
-            <div class="d-flex flex-wrap gap-2 pt-1">
+          <div class="col-lg pe-lg-5 d-flex flex-column">
+
+            <h3 class="h5 text-body-secondary">{{title}}</h3>
+            <h4>{{projectDetailTitle}}</h4>
+            <p>{{projectDetail}}</p>
+            <div class="d-flex flex-wrap gap-2 pt-1 mb-3">
               {{#each badges}}
                 <span class="badge text-dark-emphasis bg-body-secondary">{{this}}</span>
               {{/each}}
             </div>
+
             <div class="d-flex gap-2 mt-auto">
               {{#if projectUrl}}
               <a href="{{projectUrl}}" class="btn btn-primary btn-sm" target="_blank">
@@ -244,8 +292,30 @@ currentProjects:
                 Visit website
               </a>
               {{/if}}
-              <button type="button" class="btn btn-secondary btn-sm ms-auto" data-bs-dismiss="modal">Close</button>
+              {{!-- <button type="button" class="btn btn-secondary btn-sm ms-auto" data-bs-dismiss="modal">Close</button> --}}
             </div>
+          </div>
+          <div class="col-lg-7">
+
+            {{#if projectImgs}}
+            <div class="swiper swiper-project">
+              <div class="swiper-wrapper">
+                {{!-- Slides --}}
+                {{#each projectImgs}}
+                <div class="swiper-slide">
+                  {{{image this ../title null 'img-fluid'}}}
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+                {{/each}}
+              </div>
+              <div class="swiper-controls">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            {{/if}}
+
           </div>
         </div>
       {{/inline}}

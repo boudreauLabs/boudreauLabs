@@ -1,6 +1,9 @@
 .modal {
+  --#{$prefix}modal-header-padding: 0 1rem;
+
   backdrop-filter: blur(spacing(3)) brightness(50%);
 }
+
 
 .modal-body {
   @include media-breakpoint-up(lg) {

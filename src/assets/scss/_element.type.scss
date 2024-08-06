@@ -1,0 +1,27 @@
+.list-projects {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(4);
+  list-style: none;
+  padding: 0;
+
+  li {
+    position: relative;
+  }
+
+  // a {
+  //   i {
+  //     overflow: hidden;
+  //     &:before {
+  //       transform-origin: center;
+  //       transition: color 0.2s ease-out, transform 0.2s ease-out;
+  //     }
+  //   }
+  //   &:hover {
+  //     i:before {
+  //       color: shade-color($primary, 35%);
+  //       transform: rotate(45deg) scale(1.1);
+  //     }
+  //   }
+  // }
+}
