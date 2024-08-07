@@ -7,46 +7,25 @@ meta:
 
 skillList:
   - HTML
+  - PHP
   - CSS
+  - SASS
   - JavaScript
   - Wordpress
-  - PHP
-  - SASS
+  - Headless CMS
   - GIT
-  - Github
   - Responsive Design
-  - Terminal
+  - Automation Tools
   - Static Site Generators
-  - CI/CD Pipelines
+  - CI/CD Automation
   - JAMstack
 
 currentProjects:
-  - title: Moss Creek - 360 Pano Gallery
-    modId: projectMC
-    projectUrl: https://gallery.mosscreekmedia.com/
-    projectDetailTitle: Data driven panoramic gallery
-    projectDetail: 360 Panoramic gallery with multiple tag types, map integration and custom UI all driven from a spreadsheet.
-    badges:
-      - JAMstack
-      - UI Design
-      - Javascript
-      - Map Inegration
-    projectImgs:
-      - src/assets/images/projects/mosscreak-306gallery01.jpg
-      - src/assets/images/projects/mosscreak-306gallery02.jpg
-      - src/assets/images/projects/mosscreak-306gallery03.jpg
-  - title: Heron Point Seafood
-    modId: projectHPC
-    projectUrl: null
-    projectDetailTitle: Project Detail Title
-    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
-    badges:
-      - Product Design
   - title: Ker & Downey
     modId: projectKD
     projectUrl: https://kerdowney.com/
-    projectDetailTitle: Project Detail Title
-    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
+    projectDetailTitle: Travel Design Company
+    projectDetail: Luxury travel agency. Supported the design with a custom UI library. Custom map integration for selecting a destination.
     badges:
       - Frontend Coding
       - Javascript
@@ -58,8 +37,8 @@ currentProjects:
   - title: Kallista
     modId: projectKLSTA
     projectUrl: https://www.kallista.com/
-    projectDetailTitle: Project Detail Title
-    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
+    projectDetailTitle: Interior design solutions for kitchens & bath spaces
+    projectDetail: Custom UI design system to support branding. Frontend code for all CMS templates.
     badges:
       - Frontend Coding
       - Javascript
@@ -69,16 +48,30 @@ currentProjects:
   - title: Portsmouth Harbor Cruise
     modId: projectPHC
     projectUrl: https://portsmouthharbor.com/our-cruises/interactive-cruise-map
-    projectDetailTitle: Project Detail Title
-    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
+    projectDetailTitle: Interactive Cruising
+    projectDetail: Map integrations for creating and showing cruise types.
     badges:
       - Frontend Coding
       - Map Inegration
     projectImgs:
       - src/assets/images/projects/portsmouth-harbor-cruise01.jpg
       - src/assets/images/projects/portsmouth-harbor-cruise02.jpg
+  - title: Moss Creek - 360 Pano Gallery
+    modId: projectMC
+    projectUrl: https://gallery.mosscreekmedia.com/
+    projectDetailTitle: Data driven panoramic gallery
+    projectDetail: 360 Panoramic gallery supporting multiple tag types, map integration and custom UI all driven from a spreadsheet data source.
+    badges:
+      - Frontend Coding
+      - Javascript
+      - Map Inegration
+      - JAMstack
+    projectImgs:
+      - src/assets/images/projects/mosscreak-306gallery01.jpg
+      - src/assets/images/projects/mosscreak-306gallery02.jpg
+      - src/assets/images/projects/mosscreak-306gallery03.jpg
   - title: Cookie Jar Heirloom
-    projectUrl: https://heirloom.boudreaulabs.com/
+    projectUrl: https://heirloom.boudreaulabs.com/quack-case-boudreau-heirloom/
     projectImgs:
       - src/assets/images/projects/heirloom00.jpg
       - src/assets/images/projects/heirloom01.jpg
@@ -92,7 +85,16 @@ currentProjects:
       - 3D Rendering
       - JAMstack
     projectDetailTitle: Family Shenanigans
-    projectDetail: This homemade cookie jar has between passed between my family members now for over 30 years. I was lucky enough to have stewadship of this heirloom recently. Members of my family recieved a series of letters from a fake research agency telling the backstory of the heirloom.
+    projectDetail: The fictional backstory to for a homemade cookie jar that my family affectionatly refers to as the "heirloom".
+
+tempProjects:
+  - title: Heron Point Seafood
+    modId: projectHPC
+    projectUrl: null
+    projectDetailTitle: Project Detail Title
+    projectDetail: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea a nemo voluptates officia cumque ut quas, voluptas nulla aliquid eos.
+    badges:
+      - Product Design
 
 ---
 <header>
@@ -128,7 +130,7 @@ currentProjects:
 
         <h1 class="display-3">Aaron Boudreau</h1>
         <p class="h4">Creative Technologist</p>
-        <p class="lead">I'm a graphic designer, UX/UI designer &amp; front-end web developer. I love building engaging and accessible digital experiences.</p>
+        <p class="lead text-body-secondary">I'm a graphic designer, UX/UI designer &amp; front-end web developer. I love building engaging and accessible digital experiences.</p>
       </div>
     </div>
   </div>
@@ -141,24 +143,69 @@ currentProjects:
     <div class="container-xxl">
       <div class="row">
         <div class="col">
-          <h2>About</h2>
+          <h2>Getting to know me</h2>
         </div>
       </div>
-      <div class="row">
+      <div class="row gy-4">
         <div class="col-lg-6">
-          <h3 class="h4">Getting to know me</h3>
-          <p>I am a detail-oriented and skilled front-end developer with a history in print and digital design. I have evolved into a skilled professional with a keen eye for aesthetics and a lens on accessibility.</p>
+          <p>Detail-oriented and skilled front-end developer with a history in print and digital design. I have evolved into a skilled professional with a keen eye for aesthetics and a lens on accessibility.</p>
           <p>I bring a unique blend of skills and experience to any creative project; driving projects to excellence and ensuring they resonate with a diverse audience.</p>
           <a class="btn btn-outline-primary" href="{{root}}/assets/files/aaron-boudreau-resume.pdf" download>My Resume</a>
         </div>
         <div class="col-lg-6 col-xxl-5 offset-xxl-1">
-          <h3 class="h4">Digital Skills</h3>
+          <h3 class="h5">Digital Skills</h3>
           <div class="d-flex flex-wrap gap-2 fs-5 pt-1">
             {{#each skillList}}
             <span class="badge text-bg-secondary">{{this}}</span>
             {{/each}}
           </div>
         </div>
+
+        {{!-- <div class="col-lg-4">
+          <h3 class="h5">Designer</h3>
+          <p class="lead mb-2">Things I enjoy designing</p>
+          <ul class="list-inline">
+            <li class="list-inline-item">UI</li>
+            <li class="list-inline-item">Web</li>
+            <li class="list-inline-item">Apps</li>
+            <li class="list-inline-item">Logos</li>
+            <li class="list-inline-item">Product Assets</li>
+          </ul>
+
+          <p class="lead mb-2">Design Toolbox</p>
+          <ul class="list-inline">
+            <li class="list-inline-item">Figma</li>
+            <li class="list-inline-item">Photoshop</li>
+            <li class="list-inline-item">Illustrator</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h3 class="h5">Frontend Developer</h3>
+          <p class="lead mb-2">I speak the language of the machines</p>
+          <ul class="list-inline">
+            <li class="list-inline-item">HTML</li>
+            <li class="list-inline-item">PHP</li>
+            <li class="list-inline-item">Handlebars</li>
+            <li class="list-inline-item">Javascript</li>
+            <li class="list-inline-item">CSS</li>
+            <li class="list-inline-item">SASS</li>
+            <li class="list-inline-item">GIT</li>
+          </ul>
+
+          <p class="lead mb-2">Developer Toolbox</p>
+          <ul class="list-inline">
+            <li class="list-inline-item">Visual Studio Code</li>
+            <li class="list-inline-item">Bootstrap</li>
+            <li class="list-inline-item">Github</li>
+            <li class="list-inline-item">Gulp</li>
+            <li class="list-inline-item">Node</li>
+            <li class="list-inline-item">Eleventy</li>
+            <li class="list-inline-item">Cloudflare Pages</li>
+          </ul>
+
+        </div> --}}
+
       </div>
     </div>
   </section>
@@ -169,7 +216,7 @@ currentProjects:
       <div class="row">
         <div class="col-lg-6 position-relative">
           <h2>Recent Projects</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid eveniet inventore nisi illo iste sunt eum, neque, id quasi minus esse est hic voluptatem quae debitis amet alias minima!</p>
+          <p class="lead">Some of my more recent work.</p>
         </div>
         <div class="col-lg-6 col-xxl-5 offset-xxl-1">
 
@@ -207,31 +254,38 @@ currentProjects:
     <div class="container-xxl">
       <div class="row">
         <div class="col">
-          <h2>Let's Chat</h2>
+          <h2>Let's Connect</h2>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row">
         <div class="col-lg-8 col-xxl-7">
+          <p class="lead">Got a question or proposal, or just want to chat? I'm always interested about
+            <span class="badge bg-secondary">Fontend Development</span>
+            <span class="badge bg-secondary">UI/UX Design</span>
+            <span class="badge bg-secondary">JAMstack</span>
+            <span class="badge bg-secondary">Digging through history</span>
+          </p>
+          <p><i class="bi bi-envelope-at fs-5"></i> hello@boudreaulabs.com</p>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid eveniet inventore nisi illo iste sunt eum, neque, id quasi minus esse est hic voluptatem quae debitis amet alias minima!</p>
           <br>
 
           {{!-- formspark.io form --}}
           <form action="https://submit-form.com/{{#if frontofficecfg.production}}iba6EsFp5{{else}}echo{{/if}}" class="needs-validation" novalidate>
 
-            <div class="mb-3">
-              <label for="contactName" class="form-label">Your Name</label>
-              <input type="text" name="name" class="form-control" id="contactName" required>
-              <div class="invalid-feedback">
-                Please provide a name.
+            <div class="row mb-3">
+              <div class="col-lg-6">
+                <label for="contactName" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="contactName" required>
+                <div class="invalid-feedback">
+                  No name?! What should I call you then?
+                </div>
               </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="contactEmail" class="form-label">Email address</label>
-              <input type="email" name="email" class="form-control" id="contactEmail" required>
-              <div class="invalid-feedback">
-                Please provide a valid email address.
+              <div class="col-lg-6">
+                <label for="contactEmail" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="contactEmail" required>
+                <div class="invalid-feedback">
+                  Need a valid email address.
+                </div>
               </div>
             </div>
 
@@ -239,7 +293,7 @@ currentProjects:
               <label for="contactMessage" class="form-label">Message</label>
               <textarea class="form-control" name="message" id="contactMessage" rows="4" required></textarea>
               <div class="invalid-feedback">
-                Your message appears to be empty!
+                Have you nothing to say?
               </div>
             </div>
 
@@ -250,6 +304,13 @@ currentProjects:
                 data-error-callback="turnstileErrorCallback"
                 data-theme="dark">
               </div>
+              {{!--
+                Turnstile Test sitekeys
+                --------------
+                https://developers.cloudflare.com/turnstile/troubleshooting/testing/
+                1x00000000000000000000AA - Always passes
+                2x00000000000000000000AB - Always blocks
+              --}}
               {{!-- <div class="cf-turnstile"
                 data-sitekey="2x00000000000000000000AB"
                 data-callback="turnstileCallback"
@@ -262,10 +323,8 @@ currentProjects:
           </form>
 
         </div>
-        <div class="col-lg-4 offset-xxl-1">
-          <p class="h5">Email</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio commodi voluptate rem?</p>
-        </div>
+      </div>
+    </div>
   </section>
 
   {{!-- Project Modals --}}
