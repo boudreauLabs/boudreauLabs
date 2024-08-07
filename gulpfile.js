@@ -47,8 +47,8 @@ function copyAssets(done) {
       .pipe(dest(paths.dist));
 
   // Images
-  src(paths.copy.images.in, {encoding: false})
-      .pipe(dest(paths.copy.images.out));
+  // src(paths.copy.images.in, {encoding: false})
+  //     .pipe(dest(paths.copy.images.out));
 
   // Files
   src(paths.copy.files.in, {encoding: false})

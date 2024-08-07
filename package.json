@@ -11,7 +11,7 @@
     "sass": "sass --watch src/assets/scss:build/assets/css",
     "sass:prod": "sass --style=compressed src/assets/scss:build/assets/css",
     "dev": "npm-run-all clean --parallel 11ty gulp sass",
-    "build": "npm-run-all clean --parallel gulp:prod 11ty:prod sass:prod"
+    "build": "npm-run-all clean --parallel 11ty:prod sass:prod gulp:prod"
   },
   "author": "",
   "license": "UNLICENSED",
@@ -44,6 +44,7 @@
     "path": "^0.12.7",
     "postcss": "^8.4.23",
     "pretty": "^2.0.0",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "sharp": "^0.33.4"
   }
 }

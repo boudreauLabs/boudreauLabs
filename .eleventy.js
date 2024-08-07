@@ -33,7 +33,7 @@ module.exports = function(eleventyConfig) {
    * https://www.11ty.dev/docs/plugins/image/
    */
 	function imageShortcode(src, alt, sizes, modifier) {
-    // console.log(`Generating image(s) from:  ${src}`)
+    // console.log(`Generating image(s) from:  ${src}`);
     // Assign default size if not defined
     sizes = typeof sizes == 'string' ? sizes : cfg.plugins.eleventyImages.sizes;
 		let options = {
@@ -84,7 +84,7 @@ module.exports = function(eleventyConfig) {
    * {{{image
    *    @src        source file to process
    *    @alt        image alt text | Optionaly set to 'hidden' to make it invisible to screen readers
-   *    @sizes      Optional | image tag sizes attribute | Defualts to '(min-width: 1024px) 100vw, 50vw'
+   *    @sizes      Optional | image tag sizes attribute | Defaults to '(min-width: 1024px) 100vw, 50vw'
    *    @modifier   Optional | image class attibute
    * }}}
    * Example: {{{image "path/to/sorce/file.ext" "photo alt" "image size:optional" 'image class:optional'}}}
