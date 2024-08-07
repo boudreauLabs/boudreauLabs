@@ -48,9 +48,15 @@ module.exports = function(eleventyConfig) {
 				return `${name}-${width}w.${format}`
 			}
 		}
+    let hideImg = false;
 
 		// generate images
 		Image(src, options)
+
+    if (alt == 'hidden') {
+      alt = ''
+      hideImg = true
+    }
 
     // Image attributes
 		let imageAttributes = {
@@ -59,6 +65,10 @@ module.exports = function(eleventyConfig) {
 			loading: "lazy",
 			decoding: "async",
 		}
+
+    if (hideImg) {
+      imageAttributes['aria-hidden'] = true
+    }
 
     // Add modifier class if available
     if (typeof modifier !== undefined) {
@@ -73,7 +83,7 @@ module.exports = function(eleventyConfig) {
    * Handlebar useage
    * {{{image
    *    @src        source file to process
-   *    @alt        image alt text
+   *    @alt        image alt text | Optionaly set to 'hidden' to make it invisible to screen readers
    *    @sizes      Optional | image tag sizes attribute | Defualts to '(min-width: 1024px) 100vw, 50vw'
    *    @modifier   Optional | image class attibute
    * }}}
