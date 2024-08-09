@@ -1,10 +1,18 @@
 .js-fadein {
   opacity: 0;
-  transform: translateY(1rem);
+  -webkit-transform: translateY(1rem);
+      -ms-transform: translateY(1rem);
+          transform: translateY(1rem);
+  -webkit-transition: opacity 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
   transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 
   &.visible {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
