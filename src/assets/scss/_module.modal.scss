@@ -1,8 +1,6 @@
 .modal {
   --#{$prefix}modal-header-padding: 0 1rem;
-
-  -webkit-backdrop-filter: blur(spacing(3)) brightness(50%);
-          backdrop-filter: blur(spacing(3)) brightness(50%);
+  backdrop-filter: blur(spacing(3)) brightness(50%);
 }
 
 

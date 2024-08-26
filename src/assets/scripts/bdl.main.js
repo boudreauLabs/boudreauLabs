@@ -63,15 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (projectCarousells.length) {
     let slideOpts = {
       loop: false,
-      autoplay: {
-        delay: 5000,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      // },
       slidesPerView: 1,
       spaceBetween: 12,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
       pagination: {
         clickable: true,
         el: ".swiper-pagination",

@@ -8,13 +8,18 @@
   padding-left: 2rem;
 
   .swiper-controls {
+    background-color: tint-color($black, 3%);
     bottom: 0;
     left: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: spacing(1);
+    height: 100%;
     width: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 10;
   }
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     margin-bottom: spacing(3);
@@ -23,6 +28,7 @@
     display: flex;
     flex-direction: column;
     gap: spacing(2);
+    align-items: center;
   }
   .swiper-button-prev,
   .swiper-button-next {
