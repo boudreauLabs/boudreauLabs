@@ -7,23 +7,37 @@ permalink: /404.html
 ---
 {{#>page-layout-base}}
   {{#*inline "header-content"}}
-  <div class="container-xxl">
-    <div class="row">
-      <div class="col">
+  <nav id="mainNav" class="navbar bg-black navbar-expand-xxl fixed-top" data-bs-theme="dark">
+    <div class="container-xxl">
+      <a class="navbar-brand" href="/">
+        {{{image "src/assets/images/bl-logo.svg" "Boudreau Labs" null null}}}
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link"href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-xxl min-vh-90">
+    <div class="row align-items-center min-vh-50 py-5">
+      <div class="col-lg-10 col-xxl-6">
         <h1>404 not found</h1>
+        <p>The item you are looking for can not be found.</p>
       </div>
     </div>
   </div>
-  {{/inline}}
-  {{#*inline "main-content"}}
-    <section class="py-5 text-bg-dark">
-      <div class="container-xxl">
-        <div class="row">
-          <div class="col">
-            <p>The item you are looking for can not be found.</p>
-          </div>
-        </div>
-      </div>
-    </section>
   {{/inline}}
 {{/page-layout-base}}

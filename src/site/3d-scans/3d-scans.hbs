@@ -1,0 +1,68 @@
+---
+layout: default
+
+meta:
+  pgTitle: Boudreau Labs
+  pgDesc: 3D Scans
+
+lumaScans:
+  - title: Cletrac
+    link: /3d-scans/luma-cletrac
+    location: Bradley, ME
+    date: October 5, 2024
+  - title: 1934 Lombard
+    link: /3d-scans/luma-lombard-1934
+    date: August 2, 2024
+    location: Bradley, ME
+  - title: 1907 Lombard
+    link: /3d-scans/luma-lombard-1907
+    date: July 27, 2024
+    location: Bradley, ME
+  - title: Vietnam memorial
+    link: /3d-scans/luma-vietnam-memorial
+    date: July 27, 2024
+    location: Bangor, ME
+
+---
+{{#>page-layout-base}}
+  {{#*inline "header-content"}}
+    <header class="text-bg-secondary pt-7 pb-3">
+      <nav id="mainNav" class="navbar bg-black navbar-expand-xxl fixed-top" data-bs-theme="dark">
+        <div class="container-xxl">
+          <a class="navbar-brand" href="/">
+            {{{image "src/assets/images/bl-logo.svg" "Boudreau Labs" null null}}}
+          </a>
+        </div>
+      </nav>
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col">
+            <h1>3d Scans</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+  {{/inline}}
+  {{#*inline "main-content"}}
+  <div class="container-xxl py-5 min-vh-75">
+    <div class="row">
+      <div class="col">
+        <h2>Luma Scans</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 pt-4 g-4">
+          {{#each lumaScans as |scan|}}
+          <div class="col">
+            <div class="border-start border-3 border-primary px-3 position-relative">
+              <a class="stretched-link fs-5 link-offset-1" href="{{scan.link}}">
+                {{scan.title}}
+              </a>
+              <span class="d-block pt-1 small">{{scan.date}}</span>
+              <span class="d-block small">{{scan.location}}</span>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/inline}}
+{{/page-layout-base}}
