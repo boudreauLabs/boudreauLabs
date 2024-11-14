@@ -272,6 +272,12 @@ tempProjects:
           {{!-- formspark.io form --}}
           <form action="https://submit-form.com/{{#if frontofficecfg.production}}iba6EsFp5{{else}}echo{{/if}}" class="needs-validation" novalidate>
 
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://boudreaulabs.com/"
+            />
+
             <div class="row mb-3">
               <div class="col-lg-6">
                 <label for="contactName" class="form-label">Name</label>
