@@ -71,7 +71,19 @@ function clean() {
 }
 
 function browserSync(done) {
-  browsersync.init( cfg.browserSync.options );
+  browsersync.init( {
+    server: {
+      baseDir: './build/',
+      middleware: function (req, res, next) {
+        res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+        res.setHeader('Cross-Origin-Resource-Policy', 'same-site');
+        res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+        next();
+      }
+    },
+    port: 3000,
+    watch: true
+  });
   done();
 }
 

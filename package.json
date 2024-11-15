@@ -17,10 +17,12 @@
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
+    "@mkkellogg/gaussian-splats-3d": "^0.4.5",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "scrollmagic": "^2.0.8",
-    "swiper": "^11.1.9"
+    "swiper": "^11.1.9",
+    "three": "^0.170.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

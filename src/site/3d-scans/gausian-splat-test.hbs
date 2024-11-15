@@ -1,0 +1,38 @@
+---
+layout: default
+
+meta:
+  pgTitle: Boudreau Labs - Gausian Splats
+  pgDesc: 3D Gaussian Splatting with Three.js
+
+eleventyExcludeFromCollections: true
+
+---
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.170.0/three.module.js",
+      "@mkkellogg/gaussian-splats-3d": "https://cdn.jsdelivr.net/npm/@mkkellogg/gaussian-splats-3d@0.4.5/build/gaussian-splats-3d.module.min.js"
+    }
+  }
+</script>
+
+<script type="module">
+  import * as GaussianSplats3D from '@mkkellogg/gaussian-splats-3d';
+  import * as THREE from 'three';
+
+  const viewer = new GaussianSplats3D.Viewer({
+    'cameraUp': [0, -1, 0],
+    'initialCameraPosition': [-3.15634, -0.16946, -0.51552],
+    'initialCameraLookAt': [0, 0, 0],
+    'sphericalHarmonicsDegree': 2
+  });
+  let path = '/assets/gs_Grave_stone.ply';
+  viewer.addSplatScene(path, {
+    'progressiveLoad': false
+  })
+  .then(() => {
+      viewer.start();
+  });
+
+</script>
