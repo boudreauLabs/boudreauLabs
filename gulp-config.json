@@ -31,6 +31,10 @@
         "in": ["./src/assets/images/**/*.*"],
         "out": "./build/assets/images/"
       },
+      "splats": {
+        "in": ["./src/assets/splats/*.ksplat"],
+        "out": "./build/assets/splats/"
+      },
       "video": {
         "in": ["./src/assets/videos/*.*"],
         "out": "./build/assets/videos/"

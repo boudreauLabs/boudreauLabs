@@ -58,6 +58,10 @@ function copyAssets(done) {
   src(paths.copy.fonts.in, {encoding: false})
       .pipe(dest(paths.copy.fonts.out));
 
+  // 3D splat files
+  src(paths.copy.splats.in, {encoding: false})
+      .pipe(dest(paths.copy.splats.out));
+
   // Project video files
   // src(paths.copy.video.in, {encoding: false})
   //     .pipe(dest(paths.copy.video.out));
