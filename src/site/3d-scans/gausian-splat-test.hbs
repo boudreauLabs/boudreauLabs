@@ -8,6 +8,10 @@ meta:
 eleventyExcludeFromCollections: true
 
 ---
+{{!--
+  Repo: https://github.com/mkkellogg/GaussianSplats3D/
+  Examples: https://projects.markkellogg.org/threejs/demo_gaussian_splats_3d.php
+--}}
 <script type="importmap">
   {
     "imports": {
@@ -23,13 +27,13 @@ eleventyExcludeFromCollections: true
 
   const viewer = new GaussianSplats3D.Viewer({
     'cameraUp': [0, -1, 0],
-    'initialCameraPosition': [-3.15634, -0.16946, -0.51552],
-    'initialCameraLookAt': [0, 0, 0],
+    'initialCameraPosition': [2.28965, -0.65471, 0.70603],
+    'initialCameraLookAt': [0.07115, 0.14063, -0.06007],
     'sphericalHarmonicsDegree': 2
   });
-  let path = '/assets/gs_Grave_stone.ply';
+  let path = '/assets/cletrac.ksplat';
   viewer.addSplatScene(path, {
-    'progressiveLoad': false
+    'progressiveLoad': true
   })
   .then(() => {
       viewer.start();
