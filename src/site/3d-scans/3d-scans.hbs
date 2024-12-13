@@ -47,8 +47,9 @@ lumaScans:
   <div class="container-xxl py-5 min-vh-75">
     <div class="row">
       <div class="col">
-        <h2>Luma Scans</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 pt-4 g-4">
+        <h2>LumaLabs Capture Scans</h2>
+        <p>Scan processed by LumaLabs <a href="https://lumalabs.ai/interactive-scenes" target="_blank">Capture</a> service. Using LumaLabs <a href="https://lumalabs.ai/luma-web-library" target="_blank">WebGL Library</a> web viewer.</p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 pt-4 g-4 mb-6">
           {{#each lumaScans as |scan|}}
           <div class="col">
             <div class="border-start border-3 border-primary px-3 position-relative">
@@ -60,6 +61,46 @@ lumaScans:
             </div>
           </div>
           {{/each}}
+        </div>
+
+        <h2>GaussianSplats3D Viewer</h2>
+        <p>Kicking the tires with <a href="https://github.com/mkkellogg/GaussianSplats3D/" target="_blank">GaussianSplats3D</a>, a 3d splat web viewer.</p>
+        <div class="row mb-4 small">
+          <div class="col-lg-auto">
+            <p class="fw-bold mb-1">Mouse input</p>
+            <ul class="list-unstyled">
+              <li>Left click to set the focal point</li>
+              <li>Left click and drag to orbit</li>
+              <li>Right click and drag to pan</li>
+            </ul>
+          </div>
+          <div class="col-lg-auto">
+            <p class="fw-bold mb-1">Keyboard input</p>
+            <ul class="list-unstyled">
+              <li>(I) Display debug info panel</li>
+              <li>(C) Toggle mesh cursor</li>
+              <li>(U) Toggle controls orientation marker</li>
+              <li>(←) Rotate camera-up counter-clockwise</li>
+              <li>(→) Rotate camera-up clockwise</li>
+              <li>(P) Toggle point-cloud mode</li>
+              <li>(O) Toggle orthographic mode</li>
+              <li>(=) Increase splat scale</li>
+              <li>(-) Decrease splat scale</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 pt-4 g-4">
+          <div class="col">
+            <div class="border-start border-3 border-primary px-3 position-relative">
+              <a class="stretched-link fs-5 link-offset-1" href="/3d-scans/gausian-splat-test">
+                Cletrac
+              </a>
+              <span class="d-block pt-1 small">October 5, 2024</span>
+              <span class="d-block small">Bradley, ME</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
