@@ -29,7 +29,7 @@ module.exports = function(eleventyConfig) {
       relativePath += '.';
     }
     // change to forward slashes
-    let finalPath = relativePath.replace('\\', '/');
+    let finalPath = relativePath.replaceAll('\\', '/');
     return finalPath;
   });
 
