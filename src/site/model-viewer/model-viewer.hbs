@@ -1,0 +1,38 @@
+---
+layout: default
+
+meta:
+  pgTitle: Boudreau Labs - 3D Model Viewer
+  pgDesc: 3D Model Viewer
+
+---
+{{#>page-layout-base}}
+  {{!-- {{#*inline "header-content"}}
+  {{/inline}} --}}
+  {{#*inline "main-content"}}
+    <div class="container py-4">
+      <div class="row min-vh-100">
+        <div class="col">
+
+          <p>&lt;model-viewer&gt; Library | <a href="https://modelviewer.dev/" target="_blank">modelviewer.dev/</a></p>
+
+          <div class="ratio ratio-4x3">
+            <model-viewer
+              ar
+              camera-controls
+              src="/assets/models/Clearance_textured_mesh_lowpoly_glb.glb"
+              shadow-intensity="1"
+              touch-action="pan-y"
+              alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+            ></model-viewer>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  {{/inline}}
+  {{#*inline "end-page-include"}}
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  {{/inline}}
+{{/page-layout-base}}

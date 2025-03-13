@@ -34,6 +34,10 @@
       "video": {
         "in": ["./src/assets/videos/*.*"],
         "out": "./build/assets/videos/"
+      },
+      "models": {
+        "in": ["./src/assets/models/*.*"],
+        "out": "./build/assets/models/"
       }
     },
 
