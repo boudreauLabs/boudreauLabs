@@ -14,22 +14,32 @@
   {{!-- Open Graph Metadata --}}
 	<meta property="og:title" content="{{meta.pgTitle}}">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="{{root}}/apple-touch-icon.png">
+	<meta property="og:image" content="/apple-touch-icon.png">
 	<meta property="og:url" content="{{meta.siteUrl}}">
   {{#if meta.pgDesc}}<meta property="og:description" content="{{meta.pgDesc}}">{{/if}}
 	<meta property="og:site_name" content="Boudreau Labs">
 	{{!-- <meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image:alt" content="Boudreau Labs"> --}}
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{{root}}/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{root}}/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{root}}/favicon-16x16.png">
-  <link rel="manifest" href="{{root}}/site.webmanifest">
-  <link rel="mask-icon" href="{{root}}/safari-pinned-tab.svg" color="#61d8e4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#61d8e4">
   <meta name="msapplication-TileColor" content="#61d8e4">
   <meta name="theme-color" content="#61d8e4">
 
-  <link rel="stylesheet" href="{{root}}/assets/css/bdl.styles.css">
+  {{!-- Preloads & Preconnects --}}
+  <link rel="preload" href="/assets/css/bdl.styles.css" as="style" />
+  <link rel="preload" href="/assets/scripts/bdl.vendor{{#if frontofficecfg.production}}.min{{/if}}.js" as="script" />
+  <link rel="preload" href="/assets/scripts/bdl.main{{#if eleventyEnv.production}}.min{{/if}}.js" as="script" />
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin> {{!-- Google Fonts preconnect --}}
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin> {{!-- Google Fonts preconnect --}}
+
+  {{!-- Styles --}}
+  <link rel="stylesheet" href="/assets/css/bdl.styles.css">
+
+  {{!-- 3rd Party --}}
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 </head>
@@ -37,8 +47,8 @@
 
   {{{content}}}
 
-  <script src="{{root}}/assets/scripts/bdl.vendor{{#if frontofficecfg.production}}.min{{/if}}.js"></script>
-  <script src="{{root}}/assets/scripts/bdl.main{{#if frontofficecfg.production}}.min{{/if}}.js"></script>
+  <script src="/assets/scripts/bdl.vendor{{#if frontofficecfg.production}}.min{{/if}}.js"></script>
+  <script src="/assets/scripts/bdl.main{{#if frontofficecfg.production}}.min{{/if}}.js"></script>
 
 </body>
 </html>
